@@ -52,9 +52,9 @@
 				
 			break;
 		
-		case StarMap:
+		case StarMap:			
 			//geometric variables
-			radius = (viewRect.size.height - 40) / 2;
+			radius = (viewRect.size.height - 50) / 2;
 			CGRect mapRect = {	
 				(viewRect.size.width / 2) - radius, 
 				(viewRect.size.height / 2) - radius,
@@ -65,8 +65,12 @@
 			
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.05));
 			CGContextFillEllipseInRect(context, mapRect);
+			
+			//drawing constellations
+			//TODO: ADD CONSTELLATION SUPPORT
+			
+			//drawing stars
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.9));
-
 			for(int i = 0; i < [stars count]; ++i) {
 				NSValue* boxedStar = [stars objectAtIndex:i];
 				struct Star aStar;
@@ -90,6 +94,30 @@
 			}
 			
 			CGContextStrokeEllipseInRect(context, mapRect);
+			
+			//test with text
+			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.2));
+			CGContextSelectFont (context, "Helvetica Neue" , 1, kCGEncodingMacRoman);
+			CGContextSetTextDrawingMode (context, kCGTextFill);
+			CGContextShowTextAtPoint(context, origin.x - 6, origin.y + radius + 5, (const char*)"N", (size_t)1);		
+			CGContextShowTextAtPoint(context, origin.x - radius - 17, origin.y, (const char*)"W", (size_t)1);		
+			CGContextShowTextAtPoint(context, origin.x - 6, origin.y - radius - 17, (const char*)"Z", (size_t)1);		
+			CGContextShowTextAtPoint(context, origin.x + radius + 5, origin.y, (const char*)"O", (size_t)1);		
+			
+			//test with ecliptic
+			CGFloat dash1[] = {5.0, 8.0};
+			
+			CGContextSetLineWidth(context, 2.0);
+			CGContextSetLineDash(context, 0.0, dash1, 2);	
+			CGContextSetStrokeColorWithColor(context, CGColorCreateGenericRGB(0.4, 0.1, 0.1, 1.0));
+			CGContextBeginPath(context);
+			CGContextMoveToPoint(context, origin.x + radius*cos(M_PI), origin.y + radius*sin(M_PI));
+			CGContextAddCurveToPoint(context, 
+									 origin.x + 0.5*radius*cos(4), origin.y + 0.5*radius*sin(4), 
+									 origin.x + 0.5*radius*cos(5), origin.y + 0.5*radius*sin(5), 
+									 origin.x + radius*cos(0), origin.y + radius*sin(0));
+			CGContextStrokePath(context);
+			
 			
 			break;
 		default:

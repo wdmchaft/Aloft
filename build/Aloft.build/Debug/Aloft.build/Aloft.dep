@@ -1,8 +1,8 @@
-171dea42fd66c337edaf22e2406d1574 dff821a222c4b7864a58555ec5979e0a ffffffffffffffffffffffffffffffff 102 /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app
-039d44317629ccdc188355fc327cb2a8 fcd4a9e394ccde412c0e9a6819d05031 ffffffffffffffffffffffffffffffff 30200 /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/MacOS/Aloft
+171dea42fd653fc4edaf22e2406d0bf5 dff821a222c4b7864a58555ec5979e0a ffffffffffffffffffffffffffffffff 102 /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app
+039d4431762a302f188355fc327cac29 fcd4a9e394ccde412c0e9a6819d05031 ffffffffffffffffffffffffffffffff 34920 /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/MacOS/Aloft
+c42980714b490e6b8071004fc7356834 2f416ff9c12e83f53ce31a9273798e6a ffffffffffffffffffffffffffffffff 14352 /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDataManager.o
 c42980710b01a2788071004fc736b4f9 fb6e632d916376f75cd066952d7d7209 ffffffffffffffffffffffffffffffff 6528 /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/cmath.o
-c42980714b4ae9048071004fc7356834 2f416ff9c12e83f53ce31a9273798e6a ffffffffffffffffffffffffffffffff 14352 /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDataManager.o
-c42980710b8dbab08071004fc73562b7 23d35596a309669c126755f97049ef5f ffffffffffffffffffffffffffffffff 16332 /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDrawer.o
+c42980710b8da12c8071004fc7357c36 23d35596a309669c126755f97049ef5f ffffffffffffffffffffffffffffffff 18776 /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDrawer.o
 c4298071070706cc8071004fc736b7a7 577b37ba4d6464cbe6b1bdc5a9d003ee ffffffffffffffffffffffffffffffff 5456 /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALNavView.o
 c4298071078b1ed98071004fc7356d38 0a56fec4827b84440219ed484b933216 ffffffffffffffffffffffffffffffff 18020 /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALMapView.o
 c42980714bc6f6ac8071004fc736b580 fa4f174dcd412c1c8e060a6f9785059b ffffffffffffffffffffffffffffffff 23744 /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/AloftAppDelegate.o
