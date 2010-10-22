@@ -15,9 +15,6 @@
 		DC1A1AE112720D5F00591ADA /* ALMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1A1AE012720D5F00591ADA /* ALMapView.m */; };
 		DC1A1AE412720D6900591ADA /* ALNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1A1AE312720D6900591ADA /* ALNavView.m */; };
 		DC1A1AFD1272108A00591ADA /* ALDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1A1AFC1272108A00591ADA /* ALDrawer.m */; };
-		DC1A1B6D12721A2C00591ADA /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1A1B6812721A2C00591ADA /* FMDatabase.m */; };
-		DC1A1B6E12721A2C00591ADA /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1A1B6A12721A2C00591ADA /* FMDatabaseAdditions.m */; };
-		DC1A1B6F12721A2C00591ADA /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1A1B6C12721A2C00591ADA /* FMResultSet.m */; };
 		DC1A1B7112721A6C00591ADA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */; };
 		DC1A1B7512721B9900591ADA /* ALDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1A1B7412721B9900591ADA /* ALDataManager.m */; };
 		DC7B5ECF12721FBD00A2929C /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = DC7B5ECE12721FBD00A2929C /* database.db */; };
@@ -43,12 +40,6 @@
 		DC1A1AE312720D6900591ADA /* ALNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNavView.m; sourceTree = "<group>"; };
 		DC1A1AFB1272108A00591ADA /* ALDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDrawer.h; sourceTree = "<group>"; };
 		DC1A1AFC1272108A00591ADA /* ALDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDrawer.m; sourceTree = "<group>"; };
-		DC1A1B6712721A2C00591ADA /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		DC1A1B6812721A2C00591ADA /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		DC1A1B6912721A2C00591ADA /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		DC1A1B6A12721A2C00591ADA /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		DC1A1B6B12721A2C00591ADA /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		DC1A1B6C12721A2C00591ADA /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DC1A1B7312721B9900591ADA /* ALDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDataManager.h; sourceTree = "<group>"; };
 		DC1A1B7412721B9900591ADA /* ALDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDataManager.m; sourceTree = "<group>"; };
@@ -85,7 +76,6 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DC1A1B6512721A0100591ADA /* FMDB */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */,
 			);
@@ -162,19 +152,6 @@
 				DC1A1AE012720D5F00591ADA /* ALMapView.m */,
 			);
 			name = Graphics;
-			sourceTree = "<group>";
-		};
-		DC1A1B6512721A0100591ADA /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				DC1A1B6712721A2C00591ADA /* FMDatabase.h */,
-				DC1A1B6812721A2C00591ADA /* FMDatabase.m */,
-				DC1A1B6912721A2C00591ADA /* FMDatabaseAdditions.h */,
-				DC1A1B6A12721A2C00591ADA /* FMDatabaseAdditions.m */,
-				DC1A1B6B12721A2C00591ADA /* FMResultSet.h */,
-				DC1A1B6C12721A2C00591ADA /* FMResultSet.m */,
-			);
-			name = FMDB;
 			sourceTree = "<group>";
 		};
 		DC1A1B7212721B8C00591ADA /* Data */ = {
@@ -271,9 +248,6 @@
 				DC1A1AE112720D5F00591ADA /* ALMapView.m in Sources */,
 				DC1A1AE412720D6900591ADA /* ALNavView.m in Sources */,
 				DC1A1AFD1272108A00591ADA /* ALDrawer.m in Sources */,
-				DC1A1B6D12721A2C00591ADA /* FMDatabase.m in Sources */,
-				DC1A1B6E12721A2C00591ADA /* FMDatabaseAdditions.m in Sources */,
-				DC1A1B6F12721A2C00591ADA /* FMResultSet.m in Sources */,
 				DC1A1B7512721B9900591ADA /* ALDataManager.m in Sources */,
 				DC7B5FB012722A4800A2929C /* cmath.m in Sources */,
 			);

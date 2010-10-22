@@ -56,6 +56,8 @@
 		perUserProjectItems = {
 			DC18E5F61272308700B489AE /* PBXTextBookmark */ = DC18E5F61272308700B489AE /* PBXTextBookmark */;
 			DC18E604127231A500B489AE /* PBXTextBookmark */ = DC18E604127231A500B489AE /* PBXTextBookmark */;
+			DC18E6071272338E00B489AE /* PBXTextBookmark */ = DC18E6071272338E00B489AE /* PBXTextBookmark */;
+			DC18E6081272338E00B489AE /* PBXTextBookmark */ = DC18E6081272338E00B489AE /* PBXTextBookmark */;
 			DC1A1B7712721CBD00591ADA = DC1A1B7712721CBD00591ADA /* PBXTextBookmark */;
 			DC7B5FB212722A7000A2929C = DC7B5FB212722A7000A2929C /* PBXTextBookmark */;
 			DC7B5FBD12722A9000A2929C = DC7B5FBD12722A9000A2929C /* PBXTextBookmark */;
@@ -100,6 +102,26 @@
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 142;
+	};
+	DC18E6071272338E00B489AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DC1A1AFC1272108A00591ADA /* ALDrawer.m */;
+		name = "ALDrawer.m: 71";
+		rLen = 0;
+		rLoc = 2238;
+		rType = 0;
+		vrLen = 1249;
+		vrLoc = 1439;
+	};
+	DC18E6081272338E00B489AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DC1A1AFC1272108A00591ADA /* ALDrawer.m */;
+		name = "ALDrawer.m: 64";
+		rLen = 0;
+		rLoc = 1941;
+		rType = 0;
+		vrLen = 1261;
+		vrLoc = 1423;
 	};
 	DC1A1ACA12720C6800591ADA /* Aloft */ = {
 		isa = PBXExecutable;
@@ -185,8 +207,8 @@
 	DC1A1AFC1272108A00591ADA /* ALDrawer.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1407, 1209}}";
-			sepNavSelRange = "{2238, 0}";
-			sepNavVisRange = "{142, 1390}";
+			sepNavSelRange = "{1941, 0}";
+			sepNavVisRange = "{1423, 1261}";
 		};
 	};
 	DC1A1B7312721B9900591ADA /* ALDataManager.h */ = {
