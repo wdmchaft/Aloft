@@ -82,8 +82,8 @@
 				else if(aStar.mag < 3.0) { size = 2; }
 				else { size = 1; }
 				
-				float azimuth = computeAzimuth(h, aStar.ra, aStar.dec, 0, 0);
-				float altitude = computeAltitude(h, aStar.ra, aStar.dec, 0, 0);
+				float azimuth = computeAzimuth(h, aStar.ra, aStar.dec, 52, 5);
+				float altitude = computeAltitude(h, aStar.ra, aStar.dec, 52, 5);
 				if(altitude < 89) {
 				CGContextFillEllipseInRect(context, 
 										   CGRectMake(origin.x + (altitude / 90)*radius*cos(azimuth), 
@@ -105,7 +105,7 @@
 			CGContextShowTextAtPoint(context, origin.x + radius + 5, origin.y, (const char*)"O", (size_t)1);		
 			
 			//test with ecliptic
-			CGFloat dash1[] = {5.0, 8.0};
+			/* CGFloat dash1[] = {5.0, 8.0};
 			
 			CGContextSetLineWidth(context, 2.0);
 			CGContextSetLineDash(context, 0.0, dash1, 2);	
@@ -116,7 +116,7 @@
 									 origin.x + 0.5*radius*cos(4), origin.y + 0.5*radius*sin(4), 
 									 origin.x + 0.5*radius*cos(5), origin.y + 0.5*radius*sin(5), 
 									 origin.x + radius*cos(0), origin.y + radius*sin(0));
-			CGContextStrokePath(context);
+			CGContextStrokePath(context); */
 			
 			
 			break;
@@ -129,8 +129,9 @@
 /* MOVE TO TIME MANAGER IN DUE TIME */
 -(float)elapsed {
 	float elapsed;
-	int dJ = [[NSDate date] timeIntervalSinceDate:[[NSDate alloc] initWithString:@"2000-01-01 00:00:00 +0000"]]; 
-	
+	NSTimeInterval dJ = [simulatedDate timeIntervalSinceDate:[[NSDate alloc] initWithString:@"2000-01-01 00:00:00 +0000"]]; 
+	/* NSLog(@"%i", [simulatedDate timeIntervalSinceDate:[[NSDate alloc] initWithString:@"2000-01-01 00:00:00 +0000"]]);
+	NSLog(@"%@", [simulatedDate description]); */
 	dJ = dJ / 86400;
 
 	float La = 99.967794687;
@@ -148,5 +149,31 @@
 
 	return elapsed;
 }
+
+-(id)init {
+	if(self = [super init]) {
+		timeTest = [NSTimer scheduledTimerWithTimeInterval:0.075 target:self selector:@selector(calculateDate:) userInfo:nil repeats:YES];
+		simulatedDate = [[NSDate alloc] init];
+		speed = 600;
+	}
+	return self;
+}
+
+- (void)calculateDate:(id)aSender {
+    if(!actualDate) {
+        actualDate = [[NSDate alloc] init];
+	}
+	NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate:actualDate];
+	//NSLog(@"actual: %@",[actualDate description]);
+    NSTimeInterval simulatedInterval = [simulatedDate timeIntervalSinceNow];
+	//NSLog(@"simInterval: %@",[simulatedDate description]);
+
+    [simulatedDate release];
+    simulatedDate = [[NSDate alloc] initWithTimeIntervalSinceNow:simulatedInterval + (interval * speed)];
+    
+    [actualDate release];
+    actualDate = [[NSDate alloc] init]; 
+} 
+
 
 @end

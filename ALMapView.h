@@ -12,6 +12,8 @@
 @interface ALMapView : NSView {
 	ALDrawer* drawer;
 	ViewType currentType;
+	
+	NSTimer* updateTimer;
 }
 
 @property(assign) ViewType currentType;

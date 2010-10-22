@@ -17,6 +17,8 @@
 	if(self = [super initWithFrame:frameRect]) {
 		drawer = [[ALDrawer alloc] init];
 		currentType = StarMap;
+		updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.075 target:self selector:@selector(update:) userInfo:nil repeats:YES];
+
 	}
 	return self;
 }
@@ -28,6 +30,10 @@
 
 -(void)setCurrentType:(ViewType)theType {
 	currentType = theType;
+	[self setNeedsDisplay:YES];
+}
+
+-(void)update:(id)sender {
 	[self setNeedsDisplay:YES];
 }
 
