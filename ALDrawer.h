@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ALDataManager.h"
+#import "cmath.h"
 
 enum ViewType {
 	SkyView = 1,
@@ -21,5 +22,6 @@ typedef int ViewType;
 }
 
 -(void)drawMap:(ViewType)mapType InContext:(CGContextRef)context viewRect:(CGRect)viewRect ;
+-(float)elapsed;
 
 @end
