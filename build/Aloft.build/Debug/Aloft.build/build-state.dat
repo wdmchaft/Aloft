@@ -1,0 +1,504 @@
+TAloft
+v7
+r0
+t309473412.377511
+cCheck dependencies
+cProcessInfoPlistFile /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Info.plist Aloft-Info.plist
+cCopyStringsFile /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCompileXIB /Users/Jan-Willem/Desktop/Aloft/English.lproj/MainMenu.xib
+cCpResource build/Debug/Aloft.app/Contents/Resources/database.db database.db
+cProcessPCH /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch.gch Aloft_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/main.o /Users/Jan-Willem/Desktop/Aloft/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/AloftAppDelegate.o /Users/Jan-Willem/Desktop/Aloft/AloftAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALMapView.o /Users/Jan-Willem/Desktop/Aloft/ALMapView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALNavView.o /Users/Jan-Willem/Desktop/Aloft/ALNavView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDrawer.o /Users/Jan-Willem/Desktop/Aloft/ALDrawer.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMDatabase.o /Users/Jan-Willem/Desktop/Aloft/FMDatabase.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMDatabaseAdditions.o /Users/Jan-Willem/Desktop/Aloft/FMDatabaseAdditions.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMResultSet.o /Users/Jan-Willem/Desktop/Aloft/FMResultSet.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDataManager.o /Users/Jan-Willem/Desktop/Aloft/ALDataManager.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/cmath.o /Users/Jan-Willem/Desktop/Aloft/cmath.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/MacOS/Aloft normal x86_64
+cTouch /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004C5342BA00000000000000EE
+t1280524986
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004C46BD4600000000000013E6
+t1279704390
+s5094
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sqlite3.h
+c000000004C4DF712000000000003D86F
+t1280177938
+s252015
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/unistd.h
+c000000004AC59C82000000000000563E
+t1254464642
+s22078
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/lib/libsqlite3.dylib
+c000000004C5342B7000000000000CB64
+t1280524983
+s52068
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Users/Jan-Willem/Desktop/Aloft/ADSkyMap.h
+c000000004CC1D87500000000000000D2
+t1287772277
+s210
+i<Cocoa/Cocoa.h>
+
+N/Users/Jan-Willem/Desktop/Aloft/ADSkyMap.m
+c000000004CC1D87500000000000000C4
+t1287772277
+s196
+i"ADSkyMap.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/ALDataManager.h
+c000000004CC1EA990000000000000189
+t1287776921
+s393
+i<Cocoa/Cocoa.h>
+i<sqlite3.h>
+
+N/Users/Jan-Willem/Desktop/Aloft/ALDataManager.m
+c000000004CC1F2500000000000000660
+t1287778896
+s1632
+i"ALDataManager.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/ALDrawer.h
+c000000004CC1E53F000000000000018F
+t1287775551
+s399
+i<Cocoa/Cocoa.h>
+i"ALDataManager.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/ALDrawer.m
+c000000004CC1F8B80000000000000A85
+t1287780536
+s2693
+i"ALDrawer.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/ALMapView.h
+c000000004CC1F66B0000000000000138
+t1287779947
+s312
+i<Cocoa/Cocoa.h>
+i"ALDrawer.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/ALMapView.m
+c000000004CC1F6FD00000000000002B3
+t1287780093
+s691
+i"ALMapView.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/ALNavView.h
+c000000004CC1D5FA00000000000000D2
+t1287771642
+s210
+i<Cocoa/Cocoa.h>
+
+N/Users/Jan-Willem/Desktop/Aloft/ALNavView.m
+c000000004CC1D5E900000000000000C7
+t1287771625
+s199
+i"ALNavView.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/AloftAppDelegate.h
+c000000004CC1F5A70000000000000212
+t1287779751
+s530
+i<Cocoa/Cocoa.h>
+i"ALMapView.h"
+i"ALDataManager.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/AloftAppDelegate.m
+c000000004CC1F6A400000000000001FF
+t1287780004
+s511
+i"AloftAppDelegate.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/Aloft_Prefix.pch
+c000000004CC1D4E8000000000000008D
+t1287771368
+s141
+i<Cocoa/Cocoa.h>
+
+N/Users/Jan-Willem/Desktop/Aloft/English.lproj/InfoPlist.strings
+c000000004CC1D4E8000000000000002D
+t1287771368
+s45
+
+N/Users/Jan-Willem/Desktop/Aloft/English.lproj/MainMenu.xib
+c000000004CC1F7D50000000000030194
+t1287780309
+s197012
+
+N/Users/Jan-Willem/Desktop/Aloft/FMDatabase.h
+c000000004C95C4FA0000000000000AA9
+t1284883706
+s2729
+i<Foundation/Foundation.h>
+i"sqlite3.h"
+i"FMResultSet.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/FMDatabase.m
+c000000004C95C4FA0000000000004711
+t1284883706
+s18193
+i"FMDatabase.h"
+i"unistd.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/FMDatabaseAdditions.h
+c000000004C95C4FA00000000000003B3
+t1284883706
+s947
+i<Foundation/Foundation.h>
+
+N/Users/Jan-Willem/Desktop/Aloft/FMDatabaseAdditions.m
+c000000004C95C4FA0000000000000F8C
+t1284883706
+s3980
+i"FMDatabase.h"
+i"FMDatabaseAdditions.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/FMResultSet.h
+c000000004C95C4FA00000000000009EF
+t1284883706
+s2543
+i<Foundation/Foundation.h>
+i"sqlite3.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/FMResultSet.m
+c000000004C95C4FA0000000000002979
+t1284883706
+s10617
+i"FMResultSet.h"
+i"FMDatabase.h"
+i"unistd.h"
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ADSkyMap.o
+t2
+s0
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDataManager.o
+t1287779083
+s14352
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDrawer.o
+t1287780612
+s13656
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALMapView.o
+t1287780096
+s18020
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALNavView.o
+t1287772973
+s5456
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/Aloft.LinkFileList
+c000000004CC1F30B000000000000040A
+t1287779083
+s1034
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/AloftAppDelegate.o
+t1287780037
+s23744
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMDatabase.o
+t1287775556
+s67796
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMDatabaseAdditions.o
+t1287775555
+s21012
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMResultSet.o
+t1287775556
+s45488
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/cmath.o
+t1287779084
+s4152
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/main.o
+t1287772973
+s4976
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app
+t1287780612
+s102
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Info.plist
+t1287772959
+s880
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/MacOS/Aloft
+t1287780612
+s84896
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/PkgInfo
+t1287772959
+s8
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1287772961
+s92
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Resources/English.lproj/MainMenu.nib
+t1287780313
+s36832
+
+N/Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Resources/database.db
+t1287776353
+s960512
+
+N/Users/Jan-Willem/Desktop/Aloft/cmath.h
+c000000004CC1F2C800000000000000CC
+t1287779016
+s204
+
+N/Users/Jan-Willem/Desktop/Aloft/cmath.m
+c000000004CC1F2D0000000000000008B
+t1287779024
+s139
+
+N/Users/Jan-Willem/Desktop/Aloft/database.db
+c000000004C4434B200000000000EA800
+t1279538354
+s960512
+
+N/Users/Jan-Willem/Desktop/Aloft/main.m
+c000000004CC1D4E80000000000000103
+t1287771368
+s259
+i<Cocoa/Cocoa.h>
+
+N/var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch.gch
+t1287772972
+s54265616
+
+NAloft-Info.plist
+c000000004CC1D4E800000000000003EA
+t1287771368
+s1002
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies309473412#309473412#0(0"0(0#1#0"3343187568374212096#0"0#
+
+CCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ADSkyMap.o /Users/Jan-Willem/Desktop/Aloft/ADSkyMap.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDataManager.o /Users/Jan-Willem/Desktop/Aloft/ALDataManager.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s309471883.682877
+e309471884.122028
+r1
+xCompileC
+xbuild/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDataManager.o
+x/Users/Jan-Willem/Desktop/Aloft/ALDataManager.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@55"Compile /Users/Jan-Willem/Desktop/Aloft/ALDataManager.m309471883#309471884#0(0"0(0#0#47"/Users/Jan-Willem/Desktop/Aloft/ALDataManager.m8621119488#1351"    cd /Users/Jan-Willem/Desktop/Aloft    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-generated-files.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-own-target-headers.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-all-target-headers.hmap -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-project-headers.hmap -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -I/Users/Jan-Willem/Desktop/Aloft/build/Debug/include -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources/x86_64 -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources -include /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch -c /Users/Jan-Willem/Desktop/Aloft/ALDataManager.m -o /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDataManager.o0#
+
+CCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDrawer.o /Users/Jan-Willem/Desktop/Aloft/ALDrawer.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s309473412.051593
+e309473412.284925
+r1
+xCompileC
+xbuild/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDrawer.o
+x/Users/Jan-Willem/Desktop/Aloft/ALDrawer.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@50"Compile /Users/Jan-Willem/Desktop/Aloft/ALDrawer.m309473412#309473412#0(0"0(0#0#42"/Users/Jan-Willem/Desktop/Aloft/ALDrawer.m8233789861588645888#1341"    cd /Users/Jan-Willem/Desktop/Aloft    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-generated-files.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-own-target-headers.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-all-target-headers.hmap -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-project-headers.hmap -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -I/Users/Jan-Willem/Desktop/Aloft/build/Debug/include -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources/x86_64 -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources -include /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch -c /Users/Jan-Willem/Desktop/Aloft/ALDrawer.m -o /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALDrawer.o0#
+
+CCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALMapView.o /Users/Jan-Willem/Desktop/Aloft/ALMapView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s309472896.630770
+e309472896.987697
+r1
+xCompileC
+xbuild/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALMapView.o
+x/Users/Jan-Willem/Desktop/Aloft/ALMapView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@51"Compile /Users/Jan-Willem/Desktop/Aloft/ALMapView.m309472896#309472896#0(0"0(0#0#43"/Users/Jan-Willem/Desktop/Aloft/ALMapView.m8629701184#1343"    cd /Users/Jan-Willem/Desktop/Aloft    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-generated-files.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-own-target-headers.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-all-target-headers.hmap -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-project-headers.hmap -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -I/Users/Jan-Willem/Desktop/Aloft/build/Debug/include -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources/x86_64 -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources -include /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch -c /Users/Jan-Willem/Desktop/Aloft/ALMapView.m -o /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALMapView.o0#
+
+CCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALNavView.o /Users/Jan-Willem/Desktop/Aloft/ALNavView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s309465773.494462
+e309465773.638776
+r1
+xCompileC
+xbuild/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALNavView.o
+x/Users/Jan-Willem/Desktop/Aloft/ALNavView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@51"Compile /Users/Jan-Willem/Desktop/Aloft/ALNavView.m309465773#309465773#0(0"0(0#0#43"/Users/Jan-Willem/Desktop/Aloft/ALNavView.m8617953152#1343"    cd /Users/Jan-Willem/Desktop/Aloft    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-generated-files.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-own-target-headers.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-all-target-headers.hmap -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-project-headers.hmap -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -I/Users/Jan-Willem/Desktop/Aloft/build/Debug/include -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources/x86_64 -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources -include /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch -c /Users/Jan-Willem/Desktop/Aloft/ALNavView.m -o /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/ALNavView.o0#
+
+CCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/AloftAppDelegate.o /Users/Jan-Willem/Desktop/Aloft/AloftAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s309472836.946521
+e309472837.425400
+r1
+xCompileC
+xbuild/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/AloftAppDelegate.o
+x/Users/Jan-Willem/Desktop/Aloft/AloftAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@58"Compile /Users/Jan-Willem/Desktop/Aloft/AloftAppDelegate.m309472836#309472837#0(0"0(0#0#50"/Users/Jan-Willem/Desktop/Aloft/AloftAppDelegate.m8621138240#1357"    cd /Users/Jan-Willem/Desktop/Aloft    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-generated-files.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-own-target-headers.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-all-target-headers.hmap -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-project-headers.hmap -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -I/Users/Jan-Willem/Desktop/Aloft/build/Debug/include -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources/x86_64 -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources -include /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch -c /Users/Jan-Willem/Desktop/Aloft/AloftAppDelegate.m -o /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/AloftAppDelegate.o0#
+
+CCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMDatabase.o /Users/Jan-Willem/Desktop/Aloft/FMDatabase.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s309468354.169110
+e309468358.212402
+r1
+xCompileC
+xbuild/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMDatabase.o
+x/Users/Jan-Willem/Desktop/Aloft/FMDatabase.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@52"Compile /Users/Jan-Willem/Desktop/Aloft/FMDatabase.m309468354#309468358#0(0"0(0#0#44"/Users/Jan-Willem/Desktop/Aloft/FMDatabase.m8627326208#1345"    cd /Users/Jan-Willem/Desktop/Aloft    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-generated-files.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-own-target-headers.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-all-target-headers.hmap -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-project-headers.hmap -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -I/Users/Jan-Willem/Desktop/Aloft/build/Debug/include -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources/x86_64 -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources -include /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch -c /Users/Jan-Willem/Desktop/Aloft/FMDatabase.m -o /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMDatabase.o0#
+
+CCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMDatabaseAdditions.o /Users/Jan-Willem/Desktop/Aloft/FMDatabaseAdditions.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s309468355.134336
+e309468355.931852
+r1
+xCompileC
+xbuild/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMDatabaseAdditions.o
+x/Users/Jan-Willem/Desktop/Aloft/FMDatabaseAdditions.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/Jan-Willem/Desktop/Aloft/FMDatabaseAdditions.m309468355#309468355#0(0"0(0#0#53"/Users/Jan-Willem/Desktop/Aloft/FMDatabaseAdditions.m8614751712#1363"    cd /Users/Jan-Willem/Desktop/Aloft    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-generated-files.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-own-target-headers.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-all-target-headers.hmap -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-project-headers.hmap -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -I/Users/Jan-Willem/Desktop/Aloft/build/Debug/include -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources/x86_64 -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources -include /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch -c /Users/Jan-Willem/Desktop/Aloft/FMDatabaseAdditions.m -o /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMDatabaseAdditions.o0#
+
+CCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMResultSet.o /Users/Jan-Willem/Desktop/Aloft/FMResultSet.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s309468355.931945
+e309468357.005045
+r1
+xCompileC
+xbuild/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMResultSet.o
+x/Users/Jan-Willem/Desktop/Aloft/FMResultSet.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@53"Compile /Users/Jan-Willem/Desktop/Aloft/FMResultSet.m309468355#309468357#0(0"0(0#0#45"/Users/Jan-Willem/Desktop/Aloft/FMResultSet.m8627848640#1347"    cd /Users/Jan-Willem/Desktop/Aloft    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-generated-files.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-own-target-headers.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-all-target-headers.hmap -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-project-headers.hmap -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -I/Users/Jan-Willem/Desktop/Aloft/build/Debug/include -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources/x86_64 -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources -include /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch -c /Users/Jan-Willem/Desktop/Aloft/FMResultSet.m -o /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/FMResultSet.o0#
+
+CCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/cmath.o /Users/Jan-Willem/Desktop/Aloft/cmath.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s309471883.872714
+e309471884.230703
+r1
+xCompileC
+xbuild/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/cmath.o
+x/Users/Jan-Willem/Desktop/Aloft/cmath.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@47"Compile /Users/Jan-Willem/Desktop/Aloft/cmath.m309471883#309471884#0(0"0(0#0#39"/Users/Jan-Willem/Desktop/Aloft/cmath.m8618557440#1335"    cd /Users/Jan-Willem/Desktop/Aloft    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-generated-files.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-own-target-headers.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-all-target-headers.hmap -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-project-headers.hmap -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -I/Users/Jan-Willem/Desktop/Aloft/build/Debug/include -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources/x86_64 -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources -include /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch -c /Users/Jan-Willem/Desktop/Aloft/cmath.m -o /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/cmath.o0#
+
+CCompileC build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/main.o /Users/Jan-Willem/Desktop/Aloft/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s309465773.032621
+e309465773.469769
+r1
+xCompileC
+xbuild/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/main.o
+x/Users/Jan-Willem/Desktop/Aloft/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@46"Compile /Users/Jan-Willem/Desktop/Aloft/main.m309465773#309465773#0(0"0(0#0#38"/Users/Jan-Willem/Desktop/Aloft/main.m8622545152#1333"    cd /Users/Jan-Willem/Desktop/Aloft    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-generated-files.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-own-target-headers.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-all-target-headers.hmap -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-project-headers.hmap -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -I/Users/Jan-Willem/Desktop/Aloft/build/Debug/include -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources/x86_64 -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources -include /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch -c /Users/Jan-Willem/Desktop/Aloft/main.m -o /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/main.o0#
+
+CCompileXIB /Users/Jan-Willem/Desktop/Aloft/English.lproj/MainMenu.xib
+s309473113.088536
+e309473113.931184
+r1
+xCompileXIB
+x/Users/Jan-Willem/Desktop/Aloft/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib309473113#309473113#0(0"0(0#0#58"/Users/Jan-Willem/Desktop/Aloft/English.lproj/MainMenu.xib8619221536#341"    cd /Users/Jan-Willem/Desktop/Aloft    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Resources/English.lproj/MainMenu.nib /Users/Jan-Willem/Desktop/Aloft/English.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
+
+CCopyStringsFile /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s309465759.976350
+e309465761.899815
+r1
+xCopyStringsFile
+x/Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings309465759#309465761#0(0"0(0#0#63"/Users/Jan-Willem/Desktop/Aloft/English.lproj/InfoPlist.strings8594755360#349"    cd /Users/Jan-Willem/Desktop/Aloft    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Resources/English.lproj0#
+
+CCpResource build/Debug/Aloft.app/Contents/Resources/database.db database.db
+s309469152.972665
+e309469153.057402
+r1
+xCpResource
+xbuild/Debug/Aloft.app/Contents/Resources/database.db
+xdatabase.db
+lSLF07#2@16"Copy database.db309469152#309469153#0(0"0(0#0#43"/Users/Jan-Willem/Desktop/Aloft/database.db32370120545140836#304"    cd /Users/Jan-Willem/Desktop/Aloft    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/Jan-Willem/Desktop/Aloft/database.db /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Resources0#
+
+CLd /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/MacOS/Aloft normal x86_64
+s309473412.285007
+e309473412.374975
+r1
+xLd
+x/Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/MacOS/Aloft
+xnormal
+xx86_64
+lSLF07#2@79"Link /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/MacOS/Aloft309473412#309473412#0(0"0(0#0#0"8603013056#507"    cd /Users/Jan-Willem/Desktop/Aloft    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/Jan-Willem/Desktop/Aloft/build/Debug -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -filelist /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Objects-normal/x86_64/Aloft.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -lsqlite3 -o /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/MacOS/Aloft0#
+
+CProcessInfoPlistFile /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Info.plist Aloft-Info.plist
+s309465759.876605
+e309465759.976245
+r1
+xProcessInfoPlistFile
+x/Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Info.plist
+xAloft-Info.plist
+lSLF07#2@24"Process Aloft-Info.plist309465759#309465759#0(0"0(0#0#48"/Users/Jan-Willem/Desktop/Aloft/Aloft-Info.plist18859025310417008#283"    cd /Users/Jan-Willem/Desktop/Aloft    builtin-infoPlistUtility Aloft-Info.plist -genpkginfo /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app/Contents/Info.plist0#
+
+CProcessPCH /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch.gch Aloft_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s309465763.216133
+e309465773.015758
+r1
+xProcessPCH
+x/var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch.gch
+xAloft_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile Aloft_Prefix.pch309465763#309465773#0(0"0(0#0#48"/Users/Jan-Willem/Desktop/Aloft/Aloft_Prefix.pch8617179424#1248"    cd /Users/Jan-Willem/Desktop/Aloft    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-generated-files.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-own-target-headers.hmap -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-all-target-headers.hmap -iquote /Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/Aloft-project-headers.hmap -F/Users/Jan-Willem/Desktop/Aloft/build/Debug -I/Users/Jan-Willem/Desktop/Aloft/build/Debug/include -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources/x86_64 -I/Users/Jan-Willem/Desktop/Aloft/build/Aloft.build/Debug/Aloft.build/DerivedSources -c /Users/Jan-Willem/Desktop/Aloft/Aloft_Prefix.pch -o /var/folders/Uv/UvKdIi8THxapgsSfUC67N++++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Aloft_Prefix-fotywxlbwfcznsbexdfvzilldncn/Aloft_Prefix.pch.gch0#
+
+CTouch /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app
+s309473412.375051
+e309473412.377473
+r1
+xTouch
+x/Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app
+lSLF07#2@59"Touch /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app309473412#309473412#0(0"0(0#0#0"8602154912#115"    cd /Users/Jan-Willem/Desktop/Aloft    /usr/bin/touch -c /Users/Jan-Willem/Desktop/Aloft/build/Debug/Aloft.app0#
+
