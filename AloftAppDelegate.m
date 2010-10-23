@@ -24,4 +24,12 @@
 	[mapView setCurrentType:SkyView];	
 }
 
+- (IBAction)ff:(id)sender {
+	[[ALTimeManager shared] ff];
+}
+
+- (IBAction)bb:(id)sender {
+	[[ALTimeManager shared] bb];
+}
+
 @end

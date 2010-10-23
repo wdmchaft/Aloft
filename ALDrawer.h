@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ALDataManager.h"
+#import "ALTimeManager.h"
 #import "cmath.h"
 
 enum ViewType {
@@ -18,14 +19,9 @@ enum ViewType {
 typedef int ViewType;
 
 @interface ALDrawer : NSObject {
-	//move to time manager
-	NSTimer* timeTest;
-	NSDate* simulatedDate;
-	NSDate* actualDate;
-	int speed;
+
 }
 
 -(void)drawMap:(ViewType)mapType InContext:(CGContextRef)context viewRect:(CGRect)viewRect ;
--(float)elapsed;
 
 @end

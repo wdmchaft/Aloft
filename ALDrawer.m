@@ -20,7 +20,7 @@
 	CGContextFillRect(context, viewRect);		
 	float radius;
 	int size;
-	float h = [self elapsed];
+	float h = [[ALTimeManager shared] elapsed];
 	
 	switch (viewType) {
 		case SkyView:
@@ -38,7 +38,6 @@
 				else if(aStar.mag < 2.0) { size = 3; }
 				else if(aStar.mag < 3.0) { size = 2; }
 				else { size = 1; }
-				
 				
 				float azimuth = computeAzimuth(h, aStar.ra, aStar.dec, 0, 0);
 				float altitude = computeAltitude(h, aStar.ra, aStar.dec, 0, 0);
@@ -85,7 +84,7 @@
 				float azimuth = computeAzimuth(h, aStar.ra, aStar.dec, 52, 5);
 				float altitude = computeAltitude(h, aStar.ra, aStar.dec, 52, 5);
 				if(altitude < 89) {
-				CGContextFillEllipseInRect(context, 
+					CGContextFillEllipseInRect(context, 
 										   CGRectMake(origin.x + (altitude / 90)*radius*cos(azimuth), 
 													  origin.y + (altitude / 90)*radius*sin(azimuth), 
 													  size, 
@@ -120,60 +119,13 @@
 			
 			
 			break;
+		
 		default:
 			break;
 	}
 	
 }
 
-/* MOVE TO TIME MANAGER IN DUE TIME */
--(float)elapsed {
-	float elapsed;
-	NSTimeInterval dJ = [simulatedDate timeIntervalSinceDate:[[NSDate alloc] initWithString:@"2000-01-01 00:00:00 +0000"]]; 
-	/* NSLog(@"%i", [simulatedDate timeIntervalSinceDate:[[NSDate alloc] initWithString:@"2000-01-01 00:00:00 +0000"]]);
-	NSLog(@"%@", [simulatedDate description]); */
-	dJ = dJ / 86400;
-
-	float La = 99.967794687;
-	float Lb = 360.9856473662860;
-	float Lc = 2.907879 * pow(10, -13);
-	float Ld = -5.302 * pow(10,-22);
-
-	float sT = La + ( Lb * dJ ) + ( Lc * pow(dJ,2) ) + ( Ld * pow(dJ,3) );
-	while(sT > 360) {
-		sT -= 360;
-	}
-	elapsed = sT;
-	elapsed = (M_PI / 180) * elapsed;
-	elapsed += (M_PI / 180);
-
-	return elapsed;
-}
-
--(id)init {
-	if(self = [super init]) {
-		timeTest = [NSTimer scheduledTimerWithTimeInterval:0.075 target:self selector:@selector(calculateDate:) userInfo:nil repeats:YES];
-		simulatedDate = [[NSDate alloc] init];
-		speed = 600;
-	}
-	return self;
-}
-
-- (void)calculateDate:(id)aSender {
-    if(!actualDate) {
-        actualDate = [[NSDate alloc] init];
-	}
-	NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate:actualDate];
-	//NSLog(@"actual: %@",[actualDate description]);
-    NSTimeInterval simulatedInterval = [simulatedDate timeIntervalSinceNow];
-	//NSLog(@"simInterval: %@",[simulatedDate description]);
-
-    [simulatedDate release];
-    simulatedDate = [[NSDate alloc] initWithTimeIntervalSinceNow:simulatedInterval + (interval * speed)];
-    
-    [actualDate release];
-    actualDate = [[NSDate alloc] init]; 
-} 
 
 
 @end
