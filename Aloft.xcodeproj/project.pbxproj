@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		256AC3DA0F4B6AC300CF3369 /* AloftAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* AloftAppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		ACEBAA0C1272630000F3ABE0 /* ALTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEBAA0B1272630000F3ABE0 /* ALTimeManager.m */; };
-		DC1A1AE112720D5F00591ADA /* ALMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1A1AE012720D5F00591ADA /* ALMapView.m */; };
-		DC1A1AE412720D6900591ADA /* ALNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1A1AE312720D6900591ADA /* ALNavView.m */; };
-		DC1A1AFD1272108A00591ADA /* ALDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1A1AFC1272108A00591ADA /* ALDrawer.m */; };
+		AC94C297127340A500478872 /* ALDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C28C127340A500478872 /* ALDataManager.m */; };
+		AC94C298127340A500478872 /* ALDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C28E127340A500478872 /* ALDrawer.m */; };
+		AC94C299127340A500478872 /* ALMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C290127340A500478872 /* ALMapView.m */; };
+		AC94C29A127340A500478872 /* ALNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C292127340A500478872 /* ALNavView.m */; };
+		AC94C29B127340A500478872 /* AloftAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C294127340A500478872 /* AloftAppDelegate.m */; };
+		AC94C29C127340A500478872 /* ALTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C296127340A500478872 /* ALTimeManager.m */; };
+		AC94C2A0127340B800478872 /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = AC94C29E127340B800478872 /* database.db */; };
 		DC1A1B7112721A6C00591ADA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */; };
-		DC1A1B7512721B9900591ADA /* ALDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1A1B7412721B9900591ADA /* ALDataManager.m */; };
-		DC7B5ECF12721FBD00A2929C /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = DC7B5ECE12721FBD00A2929C /* database.db */; };
 		DC7B5FB012722A4800A2929C /* cmath.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7B5FAF12722A4800A2929C /* cmath.m */; };
 /* End PBXBuildFile section */
 
@@ -27,26 +27,26 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		256AC3D80F4B6AC300CF3369 /* AloftAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AloftAppDelegate.h; sourceTree = "<group>"; };
-		256AC3D90F4B6AC300CF3369 /* AloftAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AloftAppDelegate.m; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* Aloft_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aloft_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Aloft-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Aloft-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Aloft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aloft.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACEBAA0A1272630000F3ABE0 /* ALTimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTimeManager.h; sourceTree = "<group>"; };
-		ACEBAA0B1272630000F3ABE0 /* ALTimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALTimeManager.m; sourceTree = "<group>"; };
-		DC1A1ADF12720D5F00591ADA /* ALMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMapView.h; sourceTree = "<group>"; };
-		DC1A1AE012720D5F00591ADA /* ALMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMapView.m; sourceTree = "<group>"; };
-		DC1A1AE212720D6900591ADA /* ALNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALNavView.h; sourceTree = "<group>"; };
-		DC1A1AE312720D6900591ADA /* ALNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALNavView.m; sourceTree = "<group>"; };
-		DC1A1AFB1272108A00591ADA /* ALDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDrawer.h; sourceTree = "<group>"; };
-		DC1A1AFC1272108A00591ADA /* ALDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDrawer.m; sourceTree = "<group>"; };
+		AC94C28B127340A500478872 /* ALDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDataManager.h; path = Classes/ALDataManager.h; sourceTree = "<group>"; };
+		AC94C28C127340A500478872 /* ALDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDataManager.m; path = Classes/ALDataManager.m; sourceTree = "<group>"; };
+		AC94C28D127340A500478872 /* ALDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDrawer.h; path = Classes/ALDrawer.h; sourceTree = "<group>"; };
+		AC94C28E127340A500478872 /* ALDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDrawer.m; path = Classes/ALDrawer.m; sourceTree = "<group>"; };
+		AC94C28F127340A500478872 /* ALMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALMapView.h; path = Classes/ALMapView.h; sourceTree = "<group>"; };
+		AC94C290127340A500478872 /* ALMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALMapView.m; path = Classes/ALMapView.m; sourceTree = "<group>"; };
+		AC94C291127340A500478872 /* ALNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALNavView.h; path = Classes/ALNavView.h; sourceTree = "<group>"; };
+		AC94C292127340A500478872 /* ALNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALNavView.m; path = Classes/ALNavView.m; sourceTree = "<group>"; };
+		AC94C293127340A500478872 /* AloftAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AloftAppDelegate.h; path = Classes/AloftAppDelegate.h; sourceTree = "<group>"; };
+		AC94C294127340A500478872 /* AloftAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AloftAppDelegate.m; path = Classes/AloftAppDelegate.m; sourceTree = "<group>"; };
+		AC94C295127340A500478872 /* ALTimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALTimeManager.h; path = Classes/ALTimeManager.h; sourceTree = "<group>"; };
+		AC94C296127340A500478872 /* ALTimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALTimeManager.m; path = Classes/ALTimeManager.m; sourceTree = "<group>"; };
+		AC94C29E127340B800478872 /* database.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = database.db; path = Data/database.db; sourceTree = "<group>"; };
 		DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		DC1A1B7312721B9900591ADA /* ALDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDataManager.h; sourceTree = "<group>"; };
-		DC1A1B7412721B9900591ADA /* ALDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDataManager.m; sourceTree = "<group>"; };
-		DC7B5ECE12721FBD00A2929C /* database.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.db; sourceTree = "<group>"; };
 		DC7B5FAE12722A4800A2929C /* cmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmath.h; sourceTree = "<group>"; };
 		DC7B5FAF12722A4800A2929C /* cmath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmath.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,11 +67,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				ACEBAA08127262E400F3ABE0 /* Managers */,
 				DC7B5FAC127229E600A2929C /* Celestial */,
-				DC1A1AE612720D7300591ADA /* Graphics */,
-				256AC3D80F4B6AC300CF3369 /* AloftAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* AloftAppDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -144,42 +140,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ACEBAA08127262E400F3ABE0 /* Managers */ = {
+		AC94C2A61273412600478872 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				DC1A1B7212721B8C00591ADA /* Data */,
-				ACEBAA0A1272630000F3ABE0 /* ALTimeManager.h */,
-				ACEBAA0B1272630000F3ABE0 /* ALTimeManager.m */,
-			);
-			name = Managers;
-			sourceTree = "<group>";
-		};
-		DC1A1AE612720D7300591ADA /* Graphics */ = {
-			isa = PBXGroup;
-			children = (
-				DC1A1AFB1272108A00591ADA /* ALDrawer.h */,
-				DC1A1AFC1272108A00591ADA /* ALDrawer.m */,
-				DC1A1AE212720D6900591ADA /* ALNavView.h */,
-				DC1A1AE312720D6900591ADA /* ALNavView.m */,
-				DC1A1ADF12720D5F00591ADA /* ALMapView.h */,
-				DC1A1AE012720D5F00591ADA /* ALMapView.m */,
+				AC94C28D127340A500478872 /* ALDrawer.h */,
+				AC94C28E127340A500478872 /* ALDrawer.m */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
 		};
-		DC1A1B7212721B8C00591ADA /* Data */ = {
+		AC94C2A71273412C00478872 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DC1A1B7312721B9900591ADA /* ALDataManager.h */,
-				DC1A1B7412721B9900591ADA /* ALDataManager.m */,
+				AC94C28F127340A500478872 /* ALMapView.h */,
+				AC94C290127340A500478872 /* ALMapView.m */,
+				AC94C291127340A500478872 /* ALNavView.h */,
+				AC94C292127340A500478872 /* ALNavView.m */,
 			);
-			name = Data;
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AC94C2A81273413200478872 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AC94C28B127340A500478872 /* ALDataManager.h */,
+				AC94C28C127340A500478872 /* ALDataManager.m */,
+				AC94C295127340A500478872 /* ALTimeManager.h */,
+				AC94C296127340A500478872 /* ALTimeManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		AC94C2A91273413B00478872 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				DC7B5FAE12722A4800A2929C /* cmath.h */,
+				DC7B5FAF12722A4800A2929C /* cmath.m */,
+			);
+			name = Math;
 			sourceTree = "<group>";
 		};
 		DC7B5ECD12721FB100A2929C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DC7B5ECE12721FBD00A2929C /* database.db */,
+				AC94C29E127340B800478872 /* database.db */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -187,8 +191,12 @@
 		DC7B5FAC127229E600A2929C /* Celestial */ = {
 			isa = PBXGroup;
 			children = (
-				DC7B5FAE12722A4800A2929C /* cmath.h */,
-				DC7B5FAF12722A4800A2929C /* cmath.m */,
+				AC94C2A91273413B00478872 /* Math */,
+				AC94C2A81273413200478872 /* Managers */,
+				AC94C2A61273412600478872 /* Graphics */,
+				AC94C2A71273412C00478872 /* Views */,
+				AC94C293127340A500478872 /* AloftAppDelegate.h */,
+				AC94C294127340A500478872 /* AloftAppDelegate.m */,
 			);
 			name = Celestial;
 			sourceTree = "<group>";
@@ -244,7 +252,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
-				DC7B5ECF12721FBD00A2929C /* database.db in Resources */,
+				AC94C2A0127340B800478872 /* database.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,13 +264,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				256AC3DA0F4B6AC300CF3369 /* AloftAppDelegate.m in Sources */,
-				DC1A1AE112720D5F00591ADA /* ALMapView.m in Sources */,
-				DC1A1AE412720D6900591ADA /* ALNavView.m in Sources */,
-				DC1A1AFD1272108A00591ADA /* ALDrawer.m in Sources */,
-				DC1A1B7512721B9900591ADA /* ALDataManager.m in Sources */,
 				DC7B5FB012722A4800A2929C /* cmath.m in Sources */,
-				ACEBAA0C1272630000F3ABE0 /* ALTimeManager.m in Sources */,
+				AC94C297127340A500478872 /* ALDataManager.m in Sources */,
+				AC94C298127340A500478872 /* ALDrawer.m in Sources */,
+				AC94C299127340A500478872 /* ALMapView.m in Sources */,
+				AC94C29A127340A500478872 /* ALNavView.m in Sources */,
+				AC94C29B127340A500478872 /* AloftAppDelegate.m in Sources */,
+				AC94C29C127340A500478872 /* ALTimeManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
