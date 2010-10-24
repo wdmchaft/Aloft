@@ -1,19 +1,5 @@
 // !$*UTF8*$!
 {
-	256AC3D80F4B6AC300CF3369 /* AloftAppDelegate.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1407, 575}}";
-			sepNavSelRange = "{492, 32}";
-			sepNavVisRange = "{0, 530}";
-		};
-	};
-	256AC3D90F4B6AC300CF3369 /* AloftAppDelegate.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1407, 575}}";
-			sepNavSelRange = "{499, 0}";
-			sepNavVisRange = "{0, 511}";
-		};
-	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = DC1A1ACA12720C6800591ADA /* Aloft */;
@@ -33,7 +19,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					1229,
+					1179,
 					20,
 					48,
 					43,
@@ -50,8 +36,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 309477038;
-			PBXWorkspaceStateSaveDate = 309477038;
+			PBXPerProjectTemplateStateSaveDate = 309649691;
+			PBXWorkspaceStateSaveDate = 309649691;
 		};
 		perUserProjectItems = {
 			DC1A1B7712721CBD00591ADA /* PBXTextBookmark */ = DC1A1B7712721CBD00591ADA /* PBXTextBookmark */;
@@ -65,9 +51,20 @@
 			DC4679161272591700906B15 /* PBXTextBookmark */ = DC4679161272591700906B15 /* PBXTextBookmark */;
 			DC46791C1272593000906B15 /* PBXTextBookmark */ = DC46791C1272593000906B15 /* PBXTextBookmark */;
 			DC46791D1272593000906B15 /* PBXTextBookmark */ = DC46791D1272593000906B15 /* PBXTextBookmark */;
-			DC4679221272597700906B15 /* PBXTextBookmark */ = DC4679221272597700906B15 /* PBXTextBookmark */;
+			DC7A30431274E1280044A54E /* PBXTextBookmark */ = DC7A30431274E1280044A54E /* PBXTextBookmark */;
+			DC7A30441274E1280044A54E /* PBXTextBookmark */ = DC7A30441274E1280044A54E /* PBXTextBookmark */;
+			DC7A30451274E1280044A54E /* PBXTextBookmark */ = DC7A30451274E1280044A54E /* PBXTextBookmark */;
 			DC7B5FEB12722E2800A2929C /* PBXTextBookmark */ = DC7B5FEB12722E2800A2929C /* PBXTextBookmark */;
 			DC7B5FF212722E8300A2929C /* PBXTextBookmark */ = DC7B5FF212722E8300A2929C /* PBXTextBookmark */;
+			DCE08A8D1274D03900B15764 /* PBXTextBookmark */ = DCE08A8D1274D03900B15764 /* PBXTextBookmark */;
+			DCE08A991274D19A00B15764 /* PBXTextBookmark */ = DCE08A991274D19A00B15764 /* PBXTextBookmark */;
+			DCE08ACD1274D96C00B15764 /* PBXTextBookmark */ = DCE08ACD1274D96C00B15764 /* PBXTextBookmark */;
+			DCE08B351274DD1B00B15764 /* PBXTextBookmark */ = DCE08B351274DD1B00B15764 /* PBXTextBookmark */;
+			DCE08B3D1274DDB300B15764 /* PBXTextBookmark */ = DCE08B3D1274DDB300B15764 /* PBXTextBookmark */;
+			DCE08B3E1274DDB300B15764 /* PBXTextBookmark */ = DCE08B3E1274DDB300B15764 /* PBXTextBookmark */;
+			DCE08B3F1274DDB300B15764 /* PBXTextBookmark */ = DCE08B3F1274DDB300B15764 /* PBXTextBookmark */;
+			DCE08B401274DDB300B15764 /* PBXTextBookmark */ = DCE08B401274DDB300B15764 /* PBXTextBookmark */;
+			DCE08B421274DDB300B15764 /* PBXTextBookmark */ = DCE08B421274DDB300B15764 /* PBXTextBookmark */;
 		};
 		sourceControlManager = DC1A1ADC12720C7700591ADA /* Source Control */;
 		userBuildSettings = {
@@ -78,6 +75,76 @@
 		executables = (
 			DC1A1ACA12720C6800591ADA /* Aloft */,
 		);
+	};
+	AC94C28B127340A500478872 /* ALDataManager.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1407, 895}}";
+			sepNavSelRange = "{190, 0}";
+			sepNavVisRange = "{0, 645}";
+		};
+	};
+	AC94C28C127340A500478872 /* ALDataManager.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1489, 1326}}";
+			sepNavSelRange = "{3029, 0}";
+			sepNavVisRange = "{1776, 688}";
+		};
+	};
+	AC94C28D127340A500478872 /* ALDrawer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1357, 895}}";
+			sepNavSelRange = "{237, 0}";
+			sepNavVisRange = "{0, 443}";
+		};
+	};
+	AC94C28E127340A500478872 /* ALDrawer.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1357, 2756}}";
+			sepNavSelRange = "{4013, 0}";
+			sepNavVisRange = "{0, 2077}";
+		};
+	};
+	AC94C28F127340A500478872 /* ALMapView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1407, 872}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 337}";
+		};
+	};
+	AC94C290127340A500478872 /* ALMapView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1357, 895}}";
+			sepNavSelRange = "{219, 0}";
+			sepNavVisRange = "{0, 880}";
+		};
+	};
+	AC94C293127340A500478872 /* AloftAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1357, 895}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 671}";
+		};
+	};
+	AC94C294127340A500478872 /* AloftAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1357, 895}}";
+			sepNavSelRange = "{566, 0}";
+			sepNavVisRange = "{0, 633}";
+		};
+	};
+	AC94C295127340A500478872 /* ALTimeManager.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1357, 895}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 477}";
+		};
+	};
+	AC94C296127340A500478872 /* ALTimeManager.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1357, 1014}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1930}";
+		};
 	};
 	DC1A1ACA12720C6800591ADA /* Aloft */ = {
 		isa = PBXExecutable;
@@ -125,62 +192,6 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	DC1A1ADF12720D5F00591ADA /* ALMapView.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1407, 895}}";
-			sepNavSelRange = "{287, 0}";
-			sepNavVisRange = "{0, 337}";
-		};
-	};
-	DC1A1AE012720D5F00591ADA /* ALMapView.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1407, 895}}";
-			sepNavSelRange = "{427, 0}";
-			sepNavVisRange = "{0, 880}";
-		};
-	};
-	DC1A1AE212720D6900591ADA /* ALNavView.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1407, 895}}";
-			sepNavSelRange = "{198, 0}";
-			sepNavVisRange = "{0, 210}";
-		};
-	};
-	DC1A1AE312720D6900591ADA /* ALNavView.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1407, 872}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 199}";
-		};
-	};
-	DC1A1AFB1272108A00591ADA /* ALDrawer.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {962, 481}}";
-			sepNavSelRange = "{209, 0}";
-			sepNavVisRange = "{0, 495}";
-		};
-	};
-	DC1A1AFC1272108A00591ADA /* ALDrawer.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {880, 2418}}";
-			sepNavSelRange = "{4498, 0}";
-			sepNavVisRange = "{4417, 387}";
-		};
-	};
-	DC1A1B7312721B9900591ADA /* ALDataManager.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1407, 513}}";
-			sepNavSelRange = "{326, 0}";
-			sepNavVisRange = "{0, 393}";
-		};
-	};
-	DC1A1B7412721B9900591ADA /* ALDataManager.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1407, 884}}";
-			sepNavSelRange = "{923, 0}";
-			sepNavVisRange = "{0, 1632}";
-		};
-	};
 	DC1A1B7712721CBD00591ADA /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = DC1A1B7812721CBD00591ADA /* fmdb.m */;
@@ -200,7 +211,6 @@
 	};
 	DC467795127243DC00906B15 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = DC1A1B7312721B9900591ADA /* ALDataManager.h */;
 		name = "ALDataManager.h: 21";
 		rLen = 0;
 		rLoc = 326;
@@ -230,7 +240,6 @@
 	};
 	DC4678F71272573200906B15 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = DC1A1AE312720D6900591ADA /* ALNavView.m */;
 		name = "ALNavView.m: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -240,7 +249,6 @@
 	};
 	DC4678F81272573200906B15 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = DC1A1B7412721B9900591ADA /* ALDataManager.m */;
 		name = "ALDataManager.m: 42";
 		rLen = 0;
 		rLoc = 923;
@@ -250,7 +258,6 @@
 	};
 	DC4679131272591700906B15 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = DC1A1AFB1272108A00591ADA /* ALDrawer.h */;
 		name = "ALDrawer.h: 26";
 		rLen = 0;
 		rLoc = 415;
@@ -260,7 +267,6 @@
 	};
 	DC4679141272591700906B15 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = DC1A1AE212720D6900591ADA /* ALNavView.h */;
 		name = "ALNavView.h: 12";
 		rLen = 0;
 		rLoc = 198;
@@ -270,7 +276,6 @@
 	};
 	DC4679161272591700906B15 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = DC1A1ADF12720D5F00591ADA /* ALMapView.h */;
 		name = "ALMapView.h: 16";
 		rLen = 0;
 		rLoc = 287;
@@ -280,7 +285,6 @@
 	};
 	DC46791C1272593000906B15 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = DC1A1AE012720D5F00591ADA /* ALMapView.m */;
 		name = "ALMapView.m: 20";
 		rLen = 0;
 		rLoc = 427;
@@ -290,7 +294,6 @@
 	};
 	DC46791D1272593000906B15 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = DC1A1AFC1272108A00591ADA /* ALDrawer.m */;
 		name = "ALDrawer.m: 155";
 		rLen = 133;
 		rLoc = 5176;
@@ -298,14 +301,34 @@
 		vrLen = 2131;
 		vrLoc = 3831;
 	};
-	DC4679221272597700906B15 /* PBXTextBookmark */ = {
+	DC7A30431274E1280044A54E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = DC1A1AFC1272108A00591ADA /* ALDrawer.m */;
-		name = "ALDrawer.m: 138";
+		fRef = AC94C28E127340A500478872 /* ALDrawer.m */;
+		name = "ALDrawer.m: 124";
 		rLen = 0;
-		rLoc = 4860;
+		rLoc = 4013;
 		rType = 0;
-		vrLen = 2084;
+		vrLen = 2077;
+		vrLoc = 0;
+	};
+	DC7A30441274E1280044A54E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 19";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 1157;
+		vrLoc = 0;
+	};
+	DC7A30451274E1280044A54E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 15";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 880;
 		vrLoc = 0;
 	};
 	DC7B5FAE12722A4800A2929C /* cmath.h */ = {
@@ -324,7 +347,6 @@
 	};
 	DC7B5FEB12722E2800A2929C /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 256AC3D80F4B6AC300CF3369 /* AloftAppDelegate.h */;
 		name = "AloftAppDelegate.h: 23";
 		rLen = 32;
 		rLoc = 492;
@@ -334,12 +356,108 @@
 	};
 	DC7B5FF212722E8300A2929C /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 256AC3D90F4B6AC300CF3369 /* AloftAppDelegate.m */;
 		name = "AloftAppDelegate.m: 24";
 		rLen = 0;
 		rLoc = 499;
 		rType = 0;
 		vrLen = 511;
+		vrLoc = 0;
+	};
+	DCE08A8D1274D03900B15764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C28F127340A500478872 /* ALMapView.h */;
+		name = "ALMapView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 337;
+		vrLoc = 0;
+	};
+	DCE08A961274D10300B15764 /* constellation_lines.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2252, 1144}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 6436}";
+		};
+	};
+	DCE08A991274D19A00B15764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C28B127340A500478872 /* ALDataManager.h */;
+		name = "ALDataManager.h: 10";
+		rLen = 0;
+		rLoc = 190;
+		rType = 0;
+		vrLen = 645;
+		vrLoc = 0;
+	};
+	DCE08ACD1274D96C00B15764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DCE08A961274D10300B15764 /* constellation_lines.txt */;
+		name = "constellation_lines.txt: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 6436;
+		vrLoc = 0;
+	};
+	DCE08B351274DD1B00B15764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C293127340A500478872 /* AloftAppDelegate.h */;
+		name = "AloftAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 671;
+		vrLoc = 0;
+	};
+	DCE08B3D1274DDB300B15764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C294127340A500478872 /* AloftAppDelegate.m */;
+		name = "AloftAppDelegate.m: 30";
+		rLen = 0;
+		rLoc = 566;
+		rType = 0;
+		vrLen = 633;
+		vrLoc = 0;
+	};
+	DCE08B3E1274DDB300B15764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C295127340A500478872 /* ALTimeManager.h */;
+		name = "ALTimeManager.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 477;
+		vrLoc = 0;
+	};
+	DCE08B3F1274DDB300B15764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C296127340A500478872 /* ALTimeManager.m */;
+		name = "ALTimeManager.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1930;
+		vrLoc = 0;
+	};
+	DCE08B401274DDB300B15764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C28C127340A500478872 /* ALDataManager.m */;
+		name = "ALDataManager.m: 67";
+		rLen = 0;
+		rLoc = 1958;
+		rType = 0;
+		vrLen = 2431;
+		vrLoc = 344;
+	};
+	DCE08B421274DDB300B15764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C28D127340A500478872 /* ALDrawer.h */;
+		name = "ALDrawer.h: 14";
+		rLen = 0;
+		rLoc = 237;
+		rType = 0;
+		vrLen = 443;
 		vrLoc = 0;
 	};
 }

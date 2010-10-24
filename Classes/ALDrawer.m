@@ -13,7 +13,7 @@
 
 -(void)drawMap:(ViewType)viewType InContext:(CGContextRef)context viewRect:(CGRect)viewRect {
 	NSMutableArray* stars = [[ALDataManager shared] stars];
-	NSMutableArray* constellations = [[ALDataManager shared] constellations];
+	NSMutableArray* positions = [[ALDataManager shared] positions];
 	
 	CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(0.05, 0.05, 0.05, 1.0));
 	CGContextSetStrokeColorWithColor(context, CGColorCreateGenericRGB(0.1, 0.1, 0.1, 1.0));
@@ -30,27 +30,43 @@
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 0.0, 0.0, 0.9));
 			
 			//draw constellations
-			for(int i = 0; i < [constellations count]; ++i) {
-				NSValue* boxedConst = [constellations objectAtIndex:i];
-				struct Constellation aConst;
-				if (strcmp([boxedConst objCType], @encode(struct Constellation)) == 0) {
-					[boxedConst getValue:&aConst]; }
+			CGContextBeginPath(context);
+			float azimuth_old = M_PI;
+			for(int i = 0; i < [positions count]; ++i) {
+				NSValue* boxedPos = [positions objectAtIndex:i];
+				struct Pos aPos;
+
+				if (strcmp([boxedPos objCType], @encode(struct Pos)) == 0) {
+					[boxedPos getValue:&aPos]; 
 				
-				NSLog(@"%i", aConst.size);
-				
-				for(int i = 0; i < 2; ++i) {				//TODO: GET ARRAYSIZE	
-					float azimuth = computeAzimuth(h, aConst.points[i].ra, aConst.points[i].dec, 0, 0);
-					float altitude = computeAltitude(h, aConst.points[i].ra, aConst.points[i].dec, 0, 0);
-										
-					CGContextFillEllipseInRect(context, 
-											   CGRectMake(viewRect.size.width*(azimuth / (2*M_PI)), 
-														  radius*(altitude / 180), 
-														  15, 
-														  15));
-					
+					float azimuth = computeAzimuth(h, aPos.ra, aPos.dec, 52, 5);
+					float altitude = computeAltitude(h, aPos.ra, aPos.dec, 52, 5);
+
+					if((i % 2) == 0) {
+						CGContextMoveToPoint(context, viewRect.size.width*(azimuth / (2*M_PI)), radius*(altitude / 180));	
+						azimuth_old = azimuth;
+					}
+					 else {
+						 if(ABS(azimuth_old - azimuth) > 3) {
+							 if(azimuth_old < M_PI) {
+								 azimuth -= 2*M_PI;
+							 }
+							 else {
+								 azimuth += 2*M_PI;
+							 }
+						 }
+						CGContextAddLineToPoint(context, viewRect.size.width*(azimuth / (2*M_PI)), radius*(altitude / 180));	
+					}
 				}
 
 			}
+			
+			CGContextClosePath(context);
+						
+			CGContextSetStrokeColorWithColor(context, CGColorCreateGenericRGB(0.4, 0.65, 1.0, 0.15));
+			CGContextSetLineWidth(context, 1.0);
+			CGContextStrokePath(context);
+			
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.9));
 			for(int i = 0; i < [stars count]; ++i) {
 				NSValue* boxedStar = [stars objectAtIndex:i];
@@ -63,8 +79,8 @@
 				else if(aStar.mag < 3.0) { size = 2; }
 				else { size = 1; }
 				
-				float azimuth = computeAzimuth(h, aStar.pos.ra, aStar.pos.dec, 0, 0);
-				float altitude = computeAltitude(h, aStar.pos.ra, aStar.pos.dec, 0, 0);
+				float azimuth = computeAzimuth(h, aStar.pos.ra, aStar.pos.dec, 52, 5);
+				float altitude = computeAltitude(h, aStar.pos.ra, aStar.pos.dec, 52, 5);
 				
 				CGContextFillEllipseInRect(context, 
 										   CGRectMake(viewRect.size.width*(azimuth / (2*M_PI)), 
@@ -89,8 +105,42 @@
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.05));
 			CGContextFillEllipseInRect(context, mapRect);
 			
-			//drawing constellations
-			//TODO: ADD CONSTELLATION SUPPORT
+			//draw constellations
+			CGContextBeginPath(context);
+			azimuth_old = M_PI;
+			BOOL skipline = FALSE;
+			for(int i = 0; i < [positions count]; ++i) {
+				NSValue* boxedPos = [positions objectAtIndex:i];
+				struct Pos aPos;
+				
+				if (strcmp([boxedPos objCType], @encode(struct Pos)) == 0) {
+					[boxedPos getValue:&aPos]; 
+					
+					float azimuth = computeAzimuth(h, aPos.ra, aPos.dec, 52, 5);
+					float altitude = computeAltitude(h, aPos.ra, aPos.dec, 52, 5);
+					
+					if((i % 2) == 0) {
+						if(altitude < 90) {
+							CGContextMoveToPoint(context, origin.x + (altitude / 90)*radius*cos(azimuth), origin.y + (altitude / 90)*radius*sin(azimuth));	
+						}
+						else {
+							skipline = TRUE;	
+						}
+					}
+					else {
+						if(altitude < 90 && !skipline) {
+						CGContextAddLineToPoint(context, origin.x + (altitude / 90)*radius*cos(azimuth), origin.y + (altitude / 90)*radius*sin(azimuth));	
+						}
+						skipline = FALSE;
+					}
+				}
+			}
+			
+			CGContextClosePath(context);
+			
+			CGContextSetStrokeColorWithColor(context, CGColorCreateGenericRGB(0.4, 0.65, 1.0, 0.15));
+			CGContextSetLineWidth(context, 1.0);
+			CGContextStrokePath(context);
 			
 			//drawing stars
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.9));

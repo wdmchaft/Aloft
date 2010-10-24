@@ -26,7 +26,7 @@ static id sharedManager = nil;
 		dbPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:dbName];
 		stars = [[NSMutableArray alloc] init];
 		constellations = [[NSMutableArray alloc] init];
-
+		positions = [[NSMutableArray alloc] init];
 		[self getData];
 	}
 	
@@ -57,37 +57,63 @@ static id sharedManager = nil;
 		}
 		sqlite3_finalize(compiledStatement);
 	}
-	sqlite3_close(database);
 	NSLog(@".. done");
 	
 	NSLog(@"Loading: Constellations");
 	
-	struct Constellation *antlia;
-	struct Pos pos1;
-	struct Pos pos2;
+	NSMutableArray * numberArray = [[NSMutableArray arrayWithCapacity:1] retain]; 
+	NSError *e;
+	NSString *fullPath = [[NSBundle mainBundle] pathForResource:@"constellation_lines" ofType:@"txt"];
+	NSString *fileContents = [NSString stringWithContentsOfFile:fullPath encoding:NSUTF8StringEncoding error:&e];//Assuming UTF8 encoding
+	if (fileContents){
+		NSEnumerator * lineEnumerator = [[fileContents componentsSeparatedByString:@"\n" ] objectEnumerator]; 
+		NSString * enumeratedLine; 
+		// Prepare to process each line of numbers 
+		NSEnumerator * numberEnumerator; 
+		NSString * numberAsString; 
+		NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+		[f setNumberStyle:NSNumberFormatterDecimalStyle];
+		
+		while (enumeratedLine = [lineEnumerator nextObject]) { 
+			numberEnumerator = [[enumeratedLine componentsSeparatedByString:@" "] objectEnumerator]; 
+			while (numberAsString = [numberEnumerator nextObject]) { 
+				[numberArray addObject:[f numberFromString:numberAsString]]; 
+			} 
+		} 
+	}
+	else{ NSLog(@"error # %i : %@", [e code], [e localizedDescription]); }
+		
 	
-	pos1.ra = 10.4525433 * (M_PI / 12);
-	pos1.dec = -31.06780228 + 90;
-	pos2.ra = 9.98120556 * (M_PI / 12);
-	pos2.dec = -35.89093311 + 90;
+	for(int i = 0; i < [numberArray count]; ++i) {	
+		NSString *sqlStatement = [NSString stringWithFormat:@"select id,hip,gliese,bayerflamsteed,propername,ra,dec,mag,colorindex from hyg where hip = %i limit 1", [[numberArray objectAtIndex:i] integerValue]];
+		
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, [sqlStatement UTF8String], -1, &compiledStatement, NULL) == SQLITE_OK) {
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				struct Pos pos;
+				
+				pos.ra = (sqlite3_column_double(compiledStatement, 5) * (M_PI/12));
+				pos.dec = sqlite3_column_double(compiledStatement, 6) + 90;
+				
+				NSValue *boxedPos1 = [NSValue valueWithBytes:&pos objCType:@encode(struct Pos)];
+				[positions addObject:boxedPos1];
+			}
+		}
+		sqlite3_finalize(compiledStatement);
+	}
 	
-	int siz = 8;
-    antlia = malloc(sizeof(Constellation) + siz * sizeof(Pos));
-    antlia->size = siz;
-	antlia->name = @"Antlia";
-	antlia->points[0] = pos1;
-	antlia->points[1] = pos2;
-
-	NSValue *boxedConstellation = [NSValue valueWithBytes:&antlia objCType:@encode(struct Constellation)];
-	[constellations addObject:boxedConstellation];
-
 	NSLog(@".. done");
+	
+	sqlite3_close(database);
 }
 
 -(NSMutableArray*)stars {
 	return stars;
 }
 
+-(NSMutableArray*)positions {
+	return positions;
+}
 -(NSMutableArray*)constellations {
 	return constellations;
 }

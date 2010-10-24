@@ -21,19 +21,22 @@ struct Star {
 
 typedef struct Constellation {
 	NSString* name;
+	Pos pos;
 	int size;
-	Pos points[];
 } Constellation;
 
 @interface ALDataManager : NSObject {
 	NSString* dbPath;
 	NSMutableArray* stars;
 	NSMutableArray* constellations;
+	NSMutableArray* positions;
+
 }
 
 + (id)shared;
 - (void)getData;
 - (NSMutableArray*)stars;
 - (NSMutableArray*)constellations;
+- (NSMutableArray*)positions;
 
 @end

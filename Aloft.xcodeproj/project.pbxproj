@@ -14,12 +14,12 @@
 		AC94C297127340A500478872 /* ALDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C28C127340A500478872 /* ALDataManager.m */; };
 		AC94C298127340A500478872 /* ALDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C28E127340A500478872 /* ALDrawer.m */; };
 		AC94C299127340A500478872 /* ALMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C290127340A500478872 /* ALMapView.m */; };
-		AC94C29A127340A500478872 /* ALNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C292127340A500478872 /* ALNavView.m */; };
 		AC94C29B127340A500478872 /* AloftAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C294127340A500478872 /* AloftAppDelegate.m */; };
 		AC94C29C127340A500478872 /* ALTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C296127340A500478872 /* ALTimeManager.m */; };
 		AC94C2A0127340B800478872 /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = AC94C29E127340B800478872 /* database.db */; };
 		DC1A1B7112721A6C00591ADA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */; };
 		DC7B5FB012722A4800A2929C /* cmath.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7B5FAF12722A4800A2929C /* cmath.m */; };
+		DCE08A971274D10300B15764 /* constellation_lines.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCE08A961274D10300B15764 /* constellation_lines.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +39,6 @@
 		AC94C28E127340A500478872 /* ALDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDrawer.m; path = Classes/ALDrawer.m; sourceTree = "<group>"; };
 		AC94C28F127340A500478872 /* ALMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALMapView.h; path = Classes/ALMapView.h; sourceTree = "<group>"; };
 		AC94C290127340A500478872 /* ALMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALMapView.m; path = Classes/ALMapView.m; sourceTree = "<group>"; };
-		AC94C291127340A500478872 /* ALNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALNavView.h; path = Classes/ALNavView.h; sourceTree = "<group>"; };
-		AC94C292127340A500478872 /* ALNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALNavView.m; path = Classes/ALNavView.m; sourceTree = "<group>"; };
 		AC94C293127340A500478872 /* AloftAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AloftAppDelegate.h; path = Classes/AloftAppDelegate.h; sourceTree = "<group>"; };
 		AC94C294127340A500478872 /* AloftAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AloftAppDelegate.m; path = Classes/AloftAppDelegate.m; sourceTree = "<group>"; };
 		AC94C295127340A500478872 /* ALTimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALTimeManager.h; path = Classes/ALTimeManager.h; sourceTree = "<group>"; };
@@ -49,6 +47,7 @@
 		DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DC7B5FAE12722A4800A2929C /* cmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmath.h; sourceTree = "<group>"; };
 		DC7B5FAF12722A4800A2929C /* cmath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmath.m; sourceTree = "<group>"; };
+		DCE08A961274D10300B15764 /* constellation_lines.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = constellation_lines.txt; path = Data/constellation_lines.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +153,6 @@
 			children = (
 				AC94C28F127340A500478872 /* ALMapView.h */,
 				AC94C290127340A500478872 /* ALMapView.m */,
-				AC94C291127340A500478872 /* ALNavView.h */,
-				AC94C292127340A500478872 /* ALNavView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -184,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				AC94C29E127340B800478872 /* database.db */,
+				DCE08A961274D10300B15764 /* constellation_lines.txt */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -229,6 +227,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Aloft" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -253,6 +252,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				AC94C2A0127340B800478872 /* database.db in Resources */,
+				DCE08A971274D10300B15764 /* constellation_lines.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +268,6 @@
 				AC94C297127340A500478872 /* ALDataManager.m in Sources */,
 				AC94C298127340A500478872 /* ALDrawer.m in Sources */,
 				AC94C299127340A500478872 /* ALMapView.m in Sources */,
-				AC94C29A127340A500478872 /* ALNavView.m in Sources */,
 				AC94C29B127340A500478872 /* AloftAppDelegate.m in Sources */,
 				AC94C29C127340A500478872 /* ALTimeManager.m in Sources */,
 			);
