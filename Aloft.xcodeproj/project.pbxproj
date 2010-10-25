@@ -11,6 +11,14 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AC1518F21275FFD400E15888 /* icon_reference_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AC1518F11275FFD400E15888 /* icon_reference_off.png */; };
+		AC151983127604BC00E15888 /* icon_location_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AC15197E127604BC00E15888 /* icon_location_off.png */; };
+		AC151984127604BC00E15888 /* icon_settings_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AC15197F127604BC00E15888 /* icon_settings_off.png */; };
+		AC151985127604BC00E15888 /* icon_sun_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AC151980127604BC00E15888 /* icon_sun_off.png */; };
+		AC151986127604BC00E15888 /* icon_time_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AC151981127604BC00E15888 /* icon_time_off.png */; };
+		AC151987127604BC00E15888 /* icon_view_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AC151982127604BC00E15888 /* icon_view_off.png */; };
+		AC4E797C1275E7980019855E /* nav.png in Resources */ = {isa = PBXBuildFile; fileRef = AC4E797B1275E7980019855E /* nav.png */; };
+		AC4E79941275EA330019855E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4E79931275EA330019855E /* QuartzCore.framework */; };
 		AC94C297127340A500478872 /* ALDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C28C127340A500478872 /* ALDataManager.m */; };
 		AC94C298127340A500478872 /* ALDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C28E127340A500478872 /* ALDrawer.m */; };
 		AC94C299127340A500478872 /* ALMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C290127340A500478872 /* ALMapView.m */; };
@@ -33,6 +41,14 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Aloft-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Aloft-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Aloft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aloft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1518F11275FFD400E15888 /* icon_reference_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_reference_off.png; path = Resources/Images/Backgrounds/Nav/icon_reference_off.png; sourceTree = "<group>"; };
+		AC15197E127604BC00E15888 /* icon_location_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_location_off.png; path = Resources/Images/Backgrounds/Nav/icon_location_off.png; sourceTree = "<group>"; };
+		AC15197F127604BC00E15888 /* icon_settings_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_settings_off.png; path = Resources/Images/Backgrounds/Nav/icon_settings_off.png; sourceTree = "<group>"; };
+		AC151980127604BC00E15888 /* icon_sun_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_sun_off.png; path = Resources/Images/Backgrounds/Nav/icon_sun_off.png; sourceTree = "<group>"; };
+		AC151981127604BC00E15888 /* icon_time_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_time_off.png; path = Resources/Images/Backgrounds/Nav/icon_time_off.png; sourceTree = "<group>"; };
+		AC151982127604BC00E15888 /* icon_view_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_view_off.png; path = Resources/Images/Backgrounds/Nav/icon_view_off.png; sourceTree = "<group>"; };
+		AC4E797B1275E7980019855E /* nav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nav.png; path = Resources/Images/Backgrounds/Nav/nav.png; sourceTree = "<group>"; };
+		AC4E79931275EA330019855E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AC94C28B127340A500478872 /* ALDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDataManager.h; path = Classes/ALDataManager.h; sourceTree = "<group>"; };
 		AC94C28C127340A500478872 /* ALDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDataManager.m; path = Classes/ALDataManager.m; sourceTree = "<group>"; };
 		AC94C28D127340A500478872 /* ALDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDrawer.h; path = Classes/ALDrawer.h; sourceTree = "<group>"; };
@@ -57,6 +73,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				DC1A1B7112721A6C00591ADA /* libsqlite3.dylib in Frameworks */,
+				AC4E79941275EA330019855E /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +103,7 @@
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				AC4E79931275EA330019855E /* QuartzCore.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -122,6 +140,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AC4E795C1275E4C30019855E /* Images */,
 				DC7B5ECD12721FB100A2929C /* Data */,
 				8D1107310486CEB800E47090 /* Aloft-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -137,6 +156,36 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC1518F31275FFD700E15888 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				AC1518F11275FFD400E15888 /* icon_reference_off.png */,
+				AC15197E127604BC00E15888 /* icon_location_off.png */,
+				AC15197F127604BC00E15888 /* icon_settings_off.png */,
+				AC151980127604BC00E15888 /* icon_sun_off.png */,
+				AC151981127604BC00E15888 /* icon_time_off.png */,
+				AC151982127604BC00E15888 /* icon_view_off.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		AC4E795C1275E4C30019855E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AC1518F31275FFD700E15888 /* Icons */,
+				AC4E795D1275E4C90019855E /* Backgrounds */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		AC4E795D1275E4C90019855E /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				AC4E797B1275E7980019855E /* nav.png */,
+			);
+			name = Backgrounds;
 			sourceTree = "<group>";
 		};
 		AC94C2A61273412600478872 /* Graphics */ = {
@@ -227,7 +276,6 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Aloft" */;
 			compatibilityVersion = "Xcode 3.1";
-			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -253,6 +301,13 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				AC94C2A0127340B800478872 /* database.db in Resources */,
 				DCE08A971274D10300B15764 /* constellation_lines.txt in Resources */,
+				AC4E797C1275E7980019855E /* nav.png in Resources */,
+				AC1518F21275FFD400E15888 /* icon_reference_off.png in Resources */,
+				AC151983127604BC00E15888 /* icon_location_off.png in Resources */,
+				AC151984127604BC00E15888 /* icon_settings_off.png in Resources */,
+				AC151985127604BC00E15888 /* icon_sun_off.png in Resources */,
+				AC151986127604BC00E15888 /* icon_time_off.png in Resources */,
+				AC151987127604BC00E15888 /* icon_view_off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

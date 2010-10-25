@@ -14,8 +14,15 @@
 	ViewType currentType;
 	
 	NSTimer* updateTimer;
+	
+	NSArray* names;
+	
+	CALayer* rootLayer;
+	CALayer* menuLayer;
 }
 
 @property(assign) ViewType currentType;
+
+-(void)setupLayers;
 
 @end
