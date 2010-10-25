@@ -171,6 +171,23 @@
 			AC2367D31276336600B27ED9 /* PBXTextBookmark */ = AC2367D31276336600B27ED9 /* PBXTextBookmark */;
 			AC2367D7127633A400B27ED9 /* PBXTextBookmark */ = AC2367D7127633A400B27ED9 /* PBXTextBookmark */;
 			AC2367DB127633B500B27ED9 /* PBXTextBookmark */ = AC2367DB127633B500B27ED9 /* PBXTextBookmark */;
+			AC2367E11276346500B27ED9 /* PBXTextBookmark */ = AC2367E11276346500B27ED9 /* PBXTextBookmark */;
+			AC2367E7127634BD00B27ED9 /* PBXTextBookmark */ = AC2367E7127634BD00B27ED9 /* PBXTextBookmark */;
+			AC2367E91276356100B27ED9 /* PBXTextBookmark */ = AC2367E91276356100B27ED9 /* PBXTextBookmark */;
+			AC2367F0127635E800B27ED9 /* PBXTextBookmark */ = AC2367F0127635E800B27ED9 /* PBXTextBookmark */;
+			AC2367F1127635E800B27ED9 /* PBXTextBookmark */ = AC2367F1127635E800B27ED9 /* PBXTextBookmark */;
+			AC2367F5127635FA00B27ED9 /* PBXTextBookmark */ = AC2367F5127635FA00B27ED9 /* PBXTextBookmark */;
+			AC2367F6127635FA00B27ED9 /* PBXTextBookmark */ = AC2367F6127635FA00B27ED9 /* PBXTextBookmark */;
+			AC2367F91276366A00B27ED9 /* PBXTextBookmark */ = AC2367F91276366A00B27ED9 /* PBXTextBookmark */;
+			AC2367FD1276367F00B27ED9 /* PBXTextBookmark */ = AC2367FD1276367F00B27ED9 /* PBXTextBookmark */;
+			AC2368011276370000B27ED9 /* PBXTextBookmark */ = AC2368011276370000B27ED9 /* PBXTextBookmark */;
+			AC236807127637E600B27ED9 /* PBXTextBookmark */ = AC236807127637E600B27ED9 /* PBXTextBookmark */;
+			AC2368091276380900B27ED9 /* PBXTextBookmark */ = AC2368091276380900B27ED9 /* PBXTextBookmark */;
+			AC23680A1276386500B27ED9 /* PBXTextBookmark */ = AC23680A1276386500B27ED9 /* PBXTextBookmark */;
+			AC236811127638BA00B27ED9 /* PBXBookmark */ = AC236811127638BA00B27ED9 /* PBXBookmark */;
+			AC236812127638BA00B27ED9 /* PBXTextBookmark */ = AC236812127638BA00B27ED9 /* PBXTextBookmark */;
+			AC236813127638BA00B27ED9 /* PBXTextBookmark */ = AC236813127638BA00B27ED9 /* PBXTextBookmark */;
+			AC236817127638DA00B27ED9 /* PBXTextBookmark */ = AC236817127638DA00B27ED9 /* PBXTextBookmark */;
 			AC94C2AB1273414600478872 = AC94C2AB1273414600478872 /* PBXTextBookmark */;
 			AC94C2AE1273414600478872 = AC94C2AE1273414600478872 /* PBXTextBookmark */;
 			AC94C2AF1273414600478872 = AC94C2AF1273414600478872 /* PBXTextBookmark */;
@@ -317,7 +334,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 50";
 		rLen = 0;
-		rLoc = 1473;
+		rLoc = 1489;
 		rType = 0;
 		vrLen = 2145;
 		vrLoc = 677;
@@ -327,7 +344,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 50";
 		rLen = 0;
-		rLoc = 1473;
+		rLoc = 1489;
 		rType = 0;
 		vrLen = 1329;
 		vrLoc = 0;
@@ -337,7 +354,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 112";
 		rLen = 0;
-		rLoc = 6800;
+		rLoc = 6497;
 		rType = 0;
 		vrLen = 1773;
 		vrLoc = 2292;
@@ -347,7 +364,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 106";
 		rLen = 0;
-		rLoc = 4836;
+		rLoc = 4533;
 		rType = 0;
 		vrLen = 1607;
 		vrLoc = 2976;
@@ -379,7 +396,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 125";
 		rLen = 0;
-		rLoc = 5635;
+		rLoc = 5332;
 		rType = 0;
 		vrLen = 2080;
 		vrLoc = 3366;
@@ -389,7 +406,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 104";
 		rLen = 0;
-		rLoc = 4376;
+		rLoc = 4073;
 		rType = 0;
 		vrLen = 2034;
 		vrLoc = 3345;
@@ -399,7 +416,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 104";
 		rLen = 0;
-		rLoc = 4376;
+		rLoc = 4073;
 		rType = 0;
 		vrLen = 2063;
 		vrLoc = 3268;
@@ -409,7 +426,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 105";
 		rLen = 0;
-		rLoc = 4401;
+		rLoc = 4098;
 		rType = 0;
 		vrLen = 1915;
 		vrLoc = 2862;
@@ -419,7 +436,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 115";
 		rLen = 0;
-		rLoc = 5232;
+		rLoc = 4929;
 		rType = 0;
 		vrLen = 2048;
 		vrLoc = 3218;
@@ -453,7 +470,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 115";
 		rLen = 0;
-		rLoc = 5232;
+		rLoc = 4929;
 		rType = 0;
 		vrLen = 2048;
 		vrLoc = 3218;
@@ -463,7 +480,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 129";
 		rLen = 0;
-		rLoc = 5784;
+		rLoc = 5481;
 		rType = 0;
 		vrLen = 2048;
 		vrLoc = 3218;
@@ -473,7 +490,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 134";
 		rLen = 0;
-		rLoc = 5939;
+		rLoc = 5636;
 		rType = 0;
 		vrLen = 2119;
 		vrLoc = 3345;
@@ -483,7 +500,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 105";
 		rLen = 0;
-		rLoc = 4376;
+		rLoc = 4073;
 		rType = 0;
 		vrLen = 1938;
 		vrLoc = 2558;
@@ -493,7 +510,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 105";
 		rLen = 0;
-		rLoc = 4375;
+		rLoc = 4072;
 		rType = 0;
 		vrLen = 1975;
 		vrLoc = 3725;
@@ -507,7 +524,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 105";
 		rLen = 0;
-		rLoc = 4375;
+		rLoc = 4072;
 		rType = 0;
 		vrLen = 1975;
 		vrLoc = 3725;
@@ -517,7 +534,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 133";
 		rLen = 0;
-		rLoc = 5880;
+		rLoc = 5577;
 		rType = 0;
 		vrLen = 2085;
 		vrLoc = 3183;
@@ -527,7 +544,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 103";
 		rLen = 0;
-		rLoc = 4301;
+		rLoc = 3998;
 		rType = 0;
 		vrLen = 2085;
 		vrLoc = 3183;
@@ -537,7 +554,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 43";
 		rLen = 0;
-		rLoc = 1034;
+		rLoc = 1050;
 		rType = 0;
 		vrLen = 1856;
 		vrLoc = 267;
@@ -547,7 +564,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 52";
 		rLen = 0;
-		rLoc = 1386;
+		rLoc = 1402;
 		rType = 0;
 		vrLen = 1777;
 		vrLoc = 267;
@@ -557,7 +574,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 94";
 		rLen = 0;
-		rLoc = 3891;
+		rLoc = 3907;
 		rType = 0;
 		vrLen = 2173;
 		vrLoc = 1468;
@@ -567,7 +584,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6991;
+		rLoc = 6688;
 		rType = 0;
 		vrLen = 1878;
 		vrLoc = 4421;
@@ -577,7 +594,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6916;
+		rLoc = 6613;
 		rType = 0;
 		vrLen = 1880;
 		vrLoc = 4421;
@@ -587,7 +604,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6988;
+		rLoc = 6685;
 		rType = 0;
 		vrLen = 1857;
 		vrLoc = 4421;
@@ -597,7 +614,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6947;
+		rLoc = 6644;
 		rType = 0;
 		vrLen = 1857;
 		vrLoc = 4421;
@@ -607,7 +624,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 94";
 		rLen = 0;
-		rLoc = 3891;
+		rLoc = 3907;
 		rType = 0;
 		vrLen = 1995;
 		vrLoc = 2697;
@@ -617,7 +634,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 94";
 		rLen = 0;
-		rLoc = 3891;
+		rLoc = 3907;
 		rType = 0;
 		vrLen = 2087;
 		vrLoc = 1190;
@@ -627,7 +644,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 94";
 		rLen = 0;
-		rLoc = 3891;
+		rLoc = 3907;
 		rType = 0;
 		vrLen = 2085;
 		vrLoc = 1190;
@@ -637,7 +654,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 94";
 		rLen = 0;
-		rLoc = 3884;
+		rLoc = 3900;
 		rType = 0;
 		vrLen = 2085;
 		vrLoc = 1190;
@@ -647,7 +664,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6947;
+		rLoc = 6644;
 		rType = 0;
 		vrLen = 1766;
 		vrLoc = 4492;
@@ -657,7 +674,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6988;
+		rLoc = 6685;
 		rType = 0;
 		vrLen = 1768;
 		vrLoc = 4492;
@@ -667,7 +684,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 168";
 		rLen = 0;
-		rLoc = 6991;
+		rLoc = 6688;
 		rType = 0;
 		vrLen = 1819;
 		vrLoc = 4492;
@@ -677,7 +694,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6988;
+		rLoc = 6685;
 		rType = 0;
 		vrLen = 1789;
 		vrLoc = 4492;
@@ -687,7 +704,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6947;
+		rLoc = 6644;
 		rType = 0;
 		vrLen = 1836;
 		vrLoc = 4251;
@@ -697,7 +714,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6947;
+		rLoc = 6644;
 		rType = 0;
 		vrLen = 1813;
 		vrLoc = 4251;
@@ -707,7 +724,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6947;
+		rLoc = 6644;
 		rType = 0;
 		vrLen = 1953;
 		vrLoc = 3961;
@@ -717,7 +734,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6947;
+		rLoc = 6644;
 		rType = 0;
 		vrLen = 1953;
 		vrLoc = 3961;
@@ -727,7 +744,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6987;
+		rLoc = 6684;
 		rType = 0;
 		vrLen = 1900;
 		vrLoc = 4253;
@@ -737,7 +754,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6987;
+		rLoc = 6684;
 		rType = 0;
 		vrLen = 1880;
 		vrLoc = 4293;
@@ -747,7 +764,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6987;
+		rLoc = 6684;
 		rType = 0;
 		vrLen = 1879;
 		vrLoc = 4253;
@@ -757,7 +774,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6987;
+		rLoc = 6684;
 		rType = 0;
 		vrLen = 1900;
 		vrLoc = 4253;
@@ -767,7 +784,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6966;
+		rLoc = 6663;
 		rType = 0;
 		vrLen = 1761;
 		vrLoc = 4526;
@@ -777,7 +794,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6987;
+		rLoc = 6684;
 		rType = 0;
 		vrLen = 1785;
 		vrLoc = 4526;
@@ -787,7 +804,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6966;
+		rLoc = 6663;
 		rType = 0;
 		vrLen = 1761;
 		vrLoc = 4532;
@@ -797,7 +814,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 167";
 		rLen = 0;
-		rLoc = 6980;
+		rLoc = 6677;
 		rType = 0;
 		vrLen = 1761;
 		vrLoc = 4532;
@@ -807,7 +824,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 111";
 		rLen = 0;
-		rLoc = 4372;
+		rLoc = 4069;
 		rType = 0;
 		vrLen = 1974;
 		vrLoc = 3216;
@@ -817,7 +834,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 168";
 		rLen = 0;
-		rLoc = 6991;
+		rLoc = 6688;
 		rType = 0;
 		vrLen = 1680;
 		vrLoc = 4613;
@@ -827,7 +844,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 94";
 		rLen = 0;
-		rLoc = 3884;
+		rLoc = 3900;
 		rType = 0;
 		vrLen = 2225;
 		vrLoc = 1314;
@@ -837,7 +854,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 67";
 		rLen = 0;
-		rLoc = 2064;
+		rLoc = 2080;
 		rType = 0;
 		vrLen = 2165;
 		vrLoc = 1314;
@@ -847,7 +864,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 100";
 		rLen = 0;
-		rLoc = 3839;
+		rLoc = 3855;
 		rType = 0;
 		vrLen = 2001;
 		vrLoc = 2565;
@@ -857,7 +874,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 67";
 		rLen = 0;
-		rLoc = 2071;
+		rLoc = 2087;
 		rType = 0;
 		vrLen = 2243;
 		vrLoc = 966;
@@ -867,7 +884,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 67";
 		rLen = 0;
-		rLoc = 2071;
+		rLoc = 2087;
 		rType = 0;
 		vrLen = 2207;
 		vrLoc = 966;
@@ -877,7 +894,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 64";
 		rLen = 0;
-		rLoc = 1951;
+		rLoc = 1967;
 		rType = 0;
 		vrLen = 2199;
 		vrLoc = 966;
@@ -887,7 +904,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 186";
 		rLen = 0;
-		rLoc = 7335;
+		rLoc = 7032;
 		rType = 0;
 		vrLen = 1764;
 		vrLoc = 4711;
@@ -897,7 +914,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 186";
 		rLen = 0;
-		rLoc = 7335;
+		rLoc = 7032;
 		rType = 0;
 		vrLen = 1765;
 		vrLoc = 4711;
@@ -907,7 +924,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 186";
 		rLen = 0;
-		rLoc = 7335;
+		rLoc = 7032;
 		rType = 0;
 		vrLen = 1765;
 		vrLoc = 4711;
@@ -917,7 +934,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 186";
 		rLen = 0;
-		rLoc = 7335;
+		rLoc = 7032;
 		rType = 0;
 		vrLen = 1764;
 		vrLoc = 4711;
@@ -927,7 +944,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 46";
 		rLen = 0;
-		rLoc = 1115;
+		rLoc = 1131;
 		rType = 0;
 		vrLen = 1705;
 		vrLoc = 527;
@@ -937,7 +954,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 46";
 		rLen = 0;
-		rLoc = 1115;
+		rLoc = 1131;
 		rType = 0;
 		vrLen = 1891;
 		vrLoc = 647;
@@ -947,7 +964,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 67";
 		rLen = 0;
-		rLoc = 2049;
+		rLoc = 2065;
 		rType = 0;
 		vrLen = 1892;
 		vrLoc = 647;
@@ -957,7 +974,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 73";
 		rLen = 0;
-		rLoc = 2260;
+		rLoc = 2276;
 		rType = 0;
 		vrLen = 2032;
 		vrLoc = 769;
@@ -967,7 +984,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 73";
 		rLen = 0;
-		rLoc = 2260;
+		rLoc = 2276;
 		rType = 0;
 		vrLen = 2031;
 		vrLoc = 769;
@@ -977,7 +994,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 178";
 		rLen = 0;
-		rLoc = 6964;
+		rLoc = 6661;
 		rType = 0;
 		vrLen = 1761;
 		vrLoc = 4903;
@@ -987,7 +1004,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 134";
 		rLen = 0;
-		rLoc = 4827;
+		rLoc = 4524;
 		rType = 0;
 		vrLen = 1832;
 		vrLoc = 3613;
@@ -997,7 +1014,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 42";
 		rLen = 0;
-		rLoc = 899;
+		rLoc = 915;
 		rType = 0;
 		vrLen = 1839;
 		vrLoc = 3443;
@@ -1007,7 +1024,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 134";
 		rLen = 0;
-		rLoc = 4825;
+		rLoc = 4522;
 		rType = 0;
 		vrLen = 1850;
 		vrLoc = 3228;
@@ -1017,7 +1034,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 134";
 		rLen = 0;
-		rLoc = 4825;
+		rLoc = 4522;
 		rType = 0;
 		vrLen = 1844;
 		vrLoc = 3228;
@@ -1027,7 +1044,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 59";
 		rLen = 0;
-		rLoc = 1545;
+		rLoc = 1561;
 		rType = 0;
 		vrLen = 1825;
 		vrLoc = 680;
@@ -1037,7 +1054,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 57";
 		rLen = 0;
-		rLoc = 1545;
+		rLoc = 1561;
 		rType = 0;
 		vrLen = 2144;
 		vrLoc = 1474;
@@ -1047,7 +1064,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 107";
 		rLen = 0;
-		rLoc = 3565;
+		rLoc = 3581;
 		rType = 0;
 		vrLen = 1974;
 		vrLoc = 2072;
@@ -1057,7 +1074,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 110";
 		rLen = 0;
-		rLoc = 3565;
+		rLoc = 3581;
 		rType = 0;
 		vrLen = 1975;
 		vrLoc = 2168;
@@ -1067,7 +1084,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 114";
 		rLen = 0;
-		rLoc = 3783;
+		rLoc = 3799;
 		rType = 0;
 		vrLen = 1973;
 		vrLoc = 2168;
@@ -1077,7 +1094,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 110";
 		rLen = 0;
-		rLoc = 3676;
+		rLoc = 3692;
 		rType = 0;
 		vrLen = 1969;
 		vrLoc = 2168;
@@ -1087,7 +1104,7 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 108";
 		rLen = 0;
-		rLoc = 3651;
+		rLoc = 3667;
 		rType = 0;
 		vrLen = 1968;
 		vrLoc = 2168;
@@ -1097,10 +1114,174 @@
 		fRef = AC94C290127340A500478872 /* ALMapView.m */;
 		name = "ALMapView.m: 69";
 		rLen = 0;
-		rLoc = 2052;
+		rLoc = 2068;
 		rType = 0;
 		vrLen = 2055;
 		vrLoc = 790;
+	};
+	AC2367E11276346500B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 17";
+		rLen = 0;
+		rLoc = 270;
+		rType = 0;
+		vrLen = 1318;
+		vrLoc = 0;
+	};
+	AC2367E7127634BD00B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 17";
+		rLen = 0;
+		rLoc = 270;
+		rType = 0;
+		vrLen = 1320;
+		vrLoc = 0;
+	};
+	AC2367E91276356100B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 211";
+		rLen = 0;
+		rLoc = 7249;
+		rType = 0;
+		vrLen = 1678;
+		vrLoc = 5488;
+	};
+	AC2367F0127635E800B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 228";
+		rLen = 0;
+		rLoc = 8213;
+		rType = 0;
+		vrLen = 1587;
+		vrLoc = 6292;
+	};
+	AC2367F1127635E800B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 213";
+		rLen = 0;
+		rLoc = 7249;
+		rType = 0;
+		vrLen = 1581;
+		vrLoc = 6292;
+	};
+	AC2367F5127635FA00B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 213";
+		rLen = 0;
+		rLoc = 7249;
+		rType = 0;
+		vrLen = 1581;
+		vrLoc = 6292;
+	};
+	AC2367F6127635FA00B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 213";
+		rLen = 0;
+		rLoc = 7249;
+		rType = 0;
+		vrLen = 1580;
+		vrLoc = 6292;
+	};
+	AC2367F91276366A00B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 230";
+		rLen = 0;
+		rLoc = 8213;
+		rType = 0;
+		vrLen = 1608;
+		vrLoc = 6292;
+	};
+	AC2367FD1276367F00B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 230";
+		rLen = 0;
+		rLoc = 8213;
+		rType = 0;
+		vrLen = 1607;
+		vrLoc = 6292;
+	};
+	AC2368011276370000B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 234";
+		rLen = 0;
+		rLoc = 8213;
+		rType = 0;
+		vrLen = 1553;
+		vrLoc = 6420;
+	};
+	AC236807127637E600B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 230";
+		rLen = 0;
+		rLoc = 7869;
+		rType = 0;
+		vrLen = 1415;
+		vrLoc = 6610;
+	};
+	AC2368091276380900B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 231";
+		rLen = 0;
+		rLoc = 8030;
+		rType = 0;
+		vrLen = 1406;
+		vrLoc = 6610;
+	};
+	AC23680A1276386500B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 231";
+		rLen = 0;
+		rLoc = 7956;
+		rType = 0;
+		vrLen = 1458;
+		vrLoc = 6691;
+	};
+	AC236811127638BA00B27ED9 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = AC151980127604BC00E15888 /* icon_sun_off.png */;
+	};
+	AC236812127638BA00B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 231";
+		rLen = 0;
+		rLoc = 7956;
+		rType = 0;
+		vrLen = 1460;
+		vrLoc = 6689;
+	};
+	AC236813127638BA00B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 234";
+		rLen = 0;
+		rLoc = 8244;
+		rType = 0;
+		vrLen = 1471;
+		vrLoc = 6688;
+	};
+	AC236817127638DA00B27ED9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 233";
+		rLen = 0;
+		rLoc = 8040;
+		rType = 0;
+		vrLen = 1637;
+		vrLoc = 6688;
 	};
 	AC94C28B127340A500478872 /* ALDataManager.h */ = {
 		uiCtxt = {
@@ -1139,9 +1320,9 @@
 	};
 	AC94C290127340A500478872 /* ALMapView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1345, 2925}}";
-			sepNavSelRange = "{2052, 0}";
-			sepNavVisRange = "{790, 2055}";
+			sepNavIntBoundsRect = "{{0, 0}, {1345, 3276}}";
+			sepNavSelRange = "{8040, 0}";
+			sepNavVisRange = "{6688, 1637}";
 		};
 	};
 	AC94C293127340A500478872 /* AloftAppDelegate.h */ = {

@@ -36,6 +36,7 @@
 }
 
 -(void)setupLayers {
+	//SETUP THE UI
 	rootLayer = [CALayer layer];
 	[self setWantsLayer:YES];
 	[rootLayer addSublayer:menuLayer];
@@ -116,15 +117,6 @@
 		 
 		 [menuLayer addSublayer:buttonLayer];
 	 }
-	
-	/* NSInteger i;
-    for (i=0;i<[names count];i++) {
-        menuItemLayer.string=[self.names objectAtIndex:i];
-        menuItemLayer.font=@"Lucida-Grande";
-        menuItemLayer.fontSize=12;
-        menuItemLayer.foregroundColor=whiteColor;
-        [menuLayer addSublayer:menuItemLayer];
-    } // end of for loop */
 	
 	//add zoom controls
 	int height = 150;
@@ -211,5 +203,45 @@
 	[drawer drawMap:currentType InContext:ctx  viewRect:NSRectToCGRect([self bounds])];
 	[self unlockFocus];
 }
+
+- (void)mouseDown:(NSEvent *)event
+{
+    NSPoint p = [event locationInWindow];
+	CALayer* hitLayer = [rootLayer hitTest:p];
+	
+	CATransform3D transform;
+    transform = CATransform3DMakeRotation(2*M_PI, 0, 0, 1.0);
+    
+    // Create a basic animation to animate the layer's transform
+    CABasicAnimation* animation;
+    animation = [CABasicAnimation animationWithKeyPath:@"transform"];
+    
+    // Now assign the transform as the animation's value. While
+    // animating, CABasicAnimation will vary the transform
+    // attribute of its target, which for this transform will spin
+    // the target like a wheel on its z-axis. 
+    animation.toValue = [NSValue valueWithCATransform3D:transform];
+	
+    animation.duration = 2;  // two seconds
+    animation.cumulative = YES;
+		
+	[hitLayer addAnimation:animation forKey:@"opacity"];
+	
+	if([[hitLayer.contents name] isEqual:@"icon_location_off"]) {
+		[hitLayer setContents:[NSImage imageNamed:[NSString stringWithFormat:@"icon_location_on.png"]]];
+	}
+	else if([[hitLayer.contents name] isEqual:@"icon_location_on"]) {
+		[hitLayer setContents:[NSImage imageNamed:[NSString stringWithFormat:@"icon_location_off.png"]]];
+	}
+	else {
+		if([hitLayer opacity] < 1.0) {
+			[hitLayer setOpacity:1.0];
+		}
+		else {
+			[hitLayer setOpacity:0.5];
+		}
+	}
+}
+
 
 @end
