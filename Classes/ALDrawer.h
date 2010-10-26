@@ -21,6 +21,7 @@ typedef int ViewType;
 @interface ALDrawer : NSObject {
 	float zoomValue;
 	Pos origin;
+	Pos constellationpos[88];
 }
 
 @property (assign) float zoomValue;

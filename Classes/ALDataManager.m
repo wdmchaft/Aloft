@@ -25,7 +25,6 @@ static id sharedManager = nil;
 		NSString *dbName = @"database.db";
 		dbPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:dbName];
 		stars = [[NSMutableArray alloc] init];
-		constellations = [[NSMutableArray alloc] init];
 		positions = [[NSMutableArray alloc] init];
 		[self getData];
 	}
@@ -114,7 +113,7 @@ static id sharedManager = nil;
 -(NSMutableArray*)positions {
 	return positions;
 }
--(NSMutableArray*)constellations {
+-(NSArray*)constellations {
 	return constellations;
 }
 

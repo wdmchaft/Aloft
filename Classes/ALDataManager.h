@@ -36,7 +36,7 @@ typedef struct Constellation {
 + (id)shared;
 - (void)getData;
 - (NSMutableArray*)stars;
-- (NSMutableArray*)constellations;
+- (NSArray*)constellations;
 - (NSMutableArray*)positions;
 
 @end

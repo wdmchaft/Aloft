@@ -26,6 +26,13 @@
 		zoomValue = 1;
 		origin.ra = M_PI;
 		origin.dec = 0;
+		srand(time(NULL));
+		for(int i = 0; i < 88; ++i) {
+			Pos tmpPos;
+			tmpPos.ra = (((rand() % 628) + 1) / 100);
+			tmpPos.dec = (((rand() % 18000) + 1));
+			constellationpos[i] = tmpPos;	
+		}
 	}
 	return self;
 }
@@ -33,6 +40,7 @@
 -(void)drawMap:(ViewType)viewType InContext:(CGContextRef)context viewRect:(CGRect)viewRect {
 	NSMutableArray* stars = [[ALDataManager shared] stars];
 	NSMutableArray* positions = [[ALDataManager shared] positions];
+	NSArray* constellations = [NSArray arrayWithObjects:@"Andromeda",@"Antlia",@"Apus",@"Aquarius",@"Aquila",@"Ara",@"Aries",@"Auriga",@"Bo√∂tes",@"Canis-Major",@"Canis-Minor",@"Caelum",@"Camelopardalis",@"Capricornus",@"Carina",@"Cassiopeia",@"Centaurus",@"Cepheus",@"Cetus",@"Chamaeleon",@"Circinus",@"Cancer",@"Columba",@"Coma-Berenices",@"Corona-Austrina",@"Corona-Borealis",@"Crater",@"Crux",@"Corvus",@"Canes-Venatici",@"Cygnus",@"Delphinus",@"Dorado",@"Draco",@"Equuleus",@"Eridanus",@"Fornax",@"Gemini",@"Grus",@"Hercules",@"Horologium",@"Hydra",@"Hydrus",@"Indus",@"Leo-Minor",@"Lacerta",@"Leo",@"Lepus",@"Libra",@"Lupus",@"Lynx",@"Lyra",@"Mensa",@"Microscopium",@"Monoceros",@"Musca",@"Norma",@"Octans",@"Ophiuchus",@"Orion",@"Pavo",@"Pegasus",@"Perseus",@"Phoenix",@"Pictor",@"Piscis-Austrinus",@"Pisces",@"Puppis",@"Pyxis",@"Reticulum",@"Sculptor",@"Scorpius",@"Scutum",@"Serpens",@"Sextans",@"Sagitta",@"Sagittarius",@"Taurus",@"Telescopium",@"Triangulum-Austr",@"Triangulum",@"Tucana",@"Ursa-Major",@"Ursa-Minor",@"Vela",@"Virgo",@"Volans",@"Vulpecula", nil];
 	
 	CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(0.05, 0.05, 0.05, 1.0));
 	CGContextSetStrokeColorWithColor(context, CGColorCreateGenericRGB(0.1, 0.1, 0.1, 1.0));
@@ -49,6 +57,26 @@
 			radius = viewRect.size.height;
 			//geometric variables						
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 0.0, 0.0, 0.9));
+			
+			//test with text
+			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(0.72, 0.82, 0.98, (1 - (1/(2*zoomValue))) * 0.5));
+			CGContextSelectFont (context, "Didot" , 8, kCGEncodingMacRoman);
+			CGContextSetCharacterSpacing(context, 3);
+			CGContextSetTextDrawingMode (context, kCGTextFill);
+			
+			
+			for(int i = 0; i < [constellations count]; ++i) {
+			//draw constellation text test
+
+			float azimuth = computeAzimuth(h, constellationpos[i].ra, constellationpos[i].dec, 0.90754, 0.08722);
+			float altitude = computeAltitude(h, constellationpos[i].ra, constellationpos[i].dec, 0.90754, 0.08722);
+			
+				CGContextShowTextAtPoint(context, 
+										 (width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)),
+										 (height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue)), 
+										 [[[constellations objectAtIndex:i] uppercaseString] UTF8String], (size_t)[[constellations objectAtIndex:i] length]);	//[[[ALDataManager shared] constellations] objectAtIndex:i]
+				
+			}
 			
 			//draw constellations
 			CGContextBeginPath(context);
@@ -86,8 +114,8 @@
 			
 			CGContextClosePath(context);
 						
-			CGContextSetStrokeColorWithColor(context, CGColorCreateGenericRGB(0.4, 0.65, 1.0, 0.15));
-			CGContextSetLineWidth(context, 1.0);
+			CGContextSetStrokeColorWithColor(context, CGColorCreateGenericRGB(0.4, 0.65, 1.0, (1 - (1/(2*zoomValue))) * 0.15));
+			CGContextSetLineWidth(context, 2.0);
 			CGContextStrokePath(context);
 			
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.9));
@@ -132,7 +160,7 @@
 			
 			//test with text
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.2));
-			CGContextSelectFont (context, "Helvetica Neue" , 1, kCGEncodingMacRoman);
+			CGContextSelectFont (context, "Helvetica-Neue" , 12, kCGEncodingMacRoman);
 			CGContextSetTextDrawingMode (context, kCGTextFill);
 			CGContextShowTextAtPoint(context, mapOrigin.x - 6, mapOrigin.y + radius + 5, (const char*)"N", (size_t)1);		
 			CGContextShowTextAtPoint(context, mapOrigin.x - radius - 17, mapOrigin.y, (const char*)"W", (size_t)1);		
