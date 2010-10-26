@@ -182,7 +182,7 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
-		AC2366BB1276239100B27ED9 /* zoom */ = {
+		AC2366BB1276239100B27ED9 /* Zoom */ = {
 			isa = PBXGroup;
 			children = (
 				AC2366BF1276261F00B27ED9 /* minus.png */,
@@ -190,13 +190,13 @@
 				AC2366C01276261F00B27ED9 /* plus.png */,
 				AC2366C11276261F00B27ED9 /* slider.png */,
 			);
-			name = zoom;
+			name = Zoom;
 			sourceTree = "<group>";
 		};
 		AC4E795C1275E4C30019855E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				AC2366BB1276239100B27ED9 /* zoom */,
+				AC2366BB1276239100B27ED9 /* Zoom */,
 				AC1518F31275FFD700E15888 /* Icons */,
 				AC4E795D1275E4C90019855E /* Backgrounds */,
 			);

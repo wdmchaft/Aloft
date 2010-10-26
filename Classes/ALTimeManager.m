@@ -48,7 +48,7 @@ static id sharedManager = nil;
 	if(self = [super init]) {
 		timeTest = [NSTimer scheduledTimerWithTimeInterval:0.075 target:self selector:@selector(calculateDate:) userInfo:nil repeats:YES];
 		simulatedDate = [[NSDate alloc] init];
-		speed = 400;
+		speed = 1;
 	}
 	return self;
 }

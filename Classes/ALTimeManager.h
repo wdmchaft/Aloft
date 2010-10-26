@@ -14,7 +14,7 @@
 	NSTimer* timeTest;
 	NSDate* simulatedDate;
 	NSDate* actualDate;
-	int speed;	
+	float speed;	
 }
 
 @property(readwrite, assign) NSDate* actualDate;
