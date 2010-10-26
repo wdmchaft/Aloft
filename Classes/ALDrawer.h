@@ -19,8 +19,12 @@ enum ViewType {
 typedef int ViewType;
 
 @interface ALDrawer : NSObject {
-
+	float zoomValue;
+	Pos origin;
 }
+
+@property (assign) float zoomValue;
+@property (assign) Pos origin;
 
 -(void)drawMap:(ViewType)mapType InContext:(CGContextRef)context viewRect:(CGRect)viewRect ;
 

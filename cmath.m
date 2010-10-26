@@ -13,7 +13,7 @@ float computeAzimuth(float t, float ra, float dec, float lat, float lon) {
 	if(azimuth < 0) {
 		azimuth += 2 * M_PI;
 	}
-	return azimuth;
+	return azimuth; //0 < azi < 2 * M_PI
 }
 
 float computeAltitude(float t, float ra, float dec, float lat, float lon) {
@@ -21,5 +21,5 @@ float computeAltitude(float t, float ra, float dec, float lat, float lon) {
 	float d = (M_PI / 180) * (dec - 90);
 
 	float altitude = ((180 / M_PI) * asin(sin(lat) * sin(d) + (cos(lat) * cos(d) * cos(H)) ));
-	return altitude;
+	return altitude;	//-90 < alt < 90
 }

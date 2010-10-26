@@ -8,8 +8,27 @@
 
 #import "ALDrawer.h"
 
-
 @implementation ALDrawer
+
+@synthesize zoomValue, origin;
+
+-(void)setZoomValue:(float)aValue {
+	if(aValue < 1.0) {
+		zoomValue = 1;
+	}
+	else {
+		zoomValue = aValue;
+	}
+}
+
+-(id)init {
+	if(self = [super init]) {
+		zoomValue = 1;
+		origin.ra = M_PI;
+		origin.dec = 0;
+	}
+	return self;
+}
 
 -(void)drawMap:(ViewType)viewType InContext:(CGContextRef)context viewRect:(CGRect)viewRect {
 	NSMutableArray* stars = [[ALDataManager shared] stars];
@@ -22,6 +41,8 @@
 	float radius;
 	int size;
 	float h = [[ALTimeManager shared] elapsed];
+	float width = viewRect.size.width;
+	float height = viewRect.size.height;
 	
 	switch (viewType) {
 		case SkyView:
@@ -43,7 +64,8 @@
 					float altitude = computeAltitude(h, aPos.ra, aPos.dec, 0.90754, 0.08722);
 
 					if((i % 2) == 0) {
-						CGContextMoveToPoint(context, viewRect.size.width*(azimuth / (2*M_PI)), radius*(altitude / 180) + radius/2);	
+						CGContextMoveToPoint(context,	(width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)),
+											 (height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue)));
 						azimuth_old = azimuth;
 					}
 					 else {
@@ -55,7 +77,8 @@
 								 azimuth += 2*M_PI;
 							 }
 						 }
-						CGContextAddLineToPoint(context, viewRect.size.width*(azimuth / (2*M_PI)), radius*(altitude / 180) + radius/2);	
+						 CGContextAddLineToPoint(context,	(width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)),
+																(height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue)));
 					}
 				}
 
@@ -83,8 +106,8 @@
 				float altitude = computeAltitude(h, aStar.pos.ra, aStar.pos.dec, 0.90754, 0.08722);
 				
 				CGContextFillEllipseInRect(context, 
-										   CGRectMake(viewRect.size.width*(azimuth / (2*M_PI)), 
-													  radius*(altitude / 180) + radius/2, 
+										   CGRectMake((width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)),
+													  (height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue)),
 													  size, 
 													  size));
 			}
@@ -95,11 +118,11 @@
 			//geometric variables
 			radius = (viewRect.size.height - 100) / 2;
 			
-			CGPoint origin = CGPointMake(viewRect.size.width / 2, viewRect.size.height / 2 + 30);
+			CGPoint mapOrigin = CGPointMake(viewRect.size.width / 2, viewRect.size.height / 2 + 30);
 
 			CGRect mapRect = {	
-				origin.x - radius, 
-				origin.y - radius,
+				mapOrigin.x - radius, 
+				mapOrigin.y - radius,
 				radius * 2, 
 				radius * 2};
 			
@@ -111,10 +134,10 @@
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.2));
 			CGContextSelectFont (context, "Helvetica Neue" , 1, kCGEncodingMacRoman);
 			CGContextSetTextDrawingMode (context, kCGTextFill);
-			CGContextShowTextAtPoint(context, origin.x - 6, origin.y + radius + 5, (const char*)"N", (size_t)1);		
-			CGContextShowTextAtPoint(context, origin.x - radius - 17, origin.y, (const char*)"W", (size_t)1);		
-			CGContextShowTextAtPoint(context, origin.x - 6, origin.y - radius - 17, (const char*)"Z", (size_t)1);		
-			CGContextShowTextAtPoint(context, origin.x + radius + 5, origin.y, (const char*)"O", (size_t)1);		
+			CGContextShowTextAtPoint(context, mapOrigin.x - 6, mapOrigin.y + radius + 5, (const char*)"N", (size_t)1);		
+			CGContextShowTextAtPoint(context, mapOrigin.x - radius - 17, mapOrigin.y, (const char*)"W", (size_t)1);		
+			CGContextShowTextAtPoint(context, mapOrigin.x - 6, mapOrigin.y - radius - 17, (const char*)"Z", (size_t)1);		
+			CGContextShowTextAtPoint(context, mapOrigin.x + radius + 5, mapOrigin.y, (const char*)"O", (size_t)1);		
 			
 			
 			//draw constellations
@@ -133,7 +156,7 @@
 					
 					if((i % 2) == 0) {
 						if(altitude > 0) {
-							CGContextMoveToPoint(context, origin.x + ((90 - altitude) / 90)*radius*cos(azimuth), origin.y + ((90 - altitude) / 90)*radius*sin(azimuth));	
+							CGContextMoveToPoint(context, mapOrigin.x + ((90 - altitude) / 90)*radius*cos(azimuth), mapOrigin.y + ((90 - altitude) / 90)*radius*sin(azimuth));	
 						}
 						else {
 							skipline = TRUE;	
@@ -141,7 +164,7 @@
 					}
 					else {
 						if(altitude > 0 && !skipline) {
-						CGContextAddLineToPoint(context, origin.x + ((90 - altitude) / 90)*radius*cos(azimuth), origin.y + ((90 - altitude) / 90)*radius*sin(azimuth));	
+						CGContextAddLineToPoint(context, mapOrigin.x + ((90 - altitude) / 90)*radius*cos(azimuth), mapOrigin.y + ((90 - altitude) / 90)*radius*sin(azimuth));	
 						}
 						skipline = FALSE;
 					}
@@ -171,8 +194,8 @@
 				float altitude = computeAltitude(h, aStar.pos.ra, aStar.pos.dec, 0.90754, 0.08722);
 				if(altitude > 0) {
 					CGContextFillEllipseInRect(context, 
-										   CGRectMake(origin.x + ((90 - altitude) / 90)*radius*cos(azimuth), 
-													  origin.y + ((90 - altitude) / 90)*radius*sin(azimuth), 
+										   CGRectMake(mapOrigin.x + ((90 - altitude) / 90)*radius*cos(azimuth), 
+													  mapOrigin.y + ((90 - altitude) / 90)*radius*sin(azimuth), 
 													  size, 
 													  size));
 				}

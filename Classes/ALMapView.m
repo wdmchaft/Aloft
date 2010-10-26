@@ -15,10 +15,12 @@
 
 -(void)awakeFromNib {
 	//[self enterFullScreenMode:[self.window screen] withOptions:NULL];
+	zoomValue = 1;
 	
 	drawer = [[ALDrawer alloc] init];
 	currentType = SkyView;
 	updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.075 target:self selector:@selector(update:) userInfo:nil repeats:YES];
+	
 	
 	[self setupLayers];
 
@@ -52,71 +54,34 @@
 	[self setLayer:rootLayer];
 	
 	[menuLayer setAutoresizingMask:kCALayerWidthSizable];
-
-	
-    //Create whiteColor it's used to draw the text and also in the selectionLayer
-    CGColorRef whiteColor=CGColorCreateGenericRGB(1.0f,1.0f,1.0f,1.0f);
-	
 	
 	names = [NSArray arrayWithObjects:@"Reference",@"Sun",@"View",@"Time",@"Settings",@"Location",nil];
 	 for (int i=0;i<[names count];i++) {
-		 CALayer *buttonLayer = [CALayer layer];
-		 buttonLayer.frame = CGRectMake(0, 0, 80, 50);
-		 buttonLayer.layoutManager = [CAConstraintLayoutManager layoutManager];
-		 [buttonLayer addConstraint:[CAConstraint
-									   constraintWithAttribute:kCAConstraintMaxX
-									   relativeTo:@"superlayer"
-									   attribute:kCAConstraintMaxX
-									 offset: -(20 + (80 * i))]];
-		 
-		 [buttonLayer addConstraint:[CAConstraint
-									 constraintWithAttribute:kCAConstraintMinY
-									 relativeTo:@"superlayer"
-									 attribute:kCAConstraintMinY
-									 offset: 8]];
-		 
-		 CATextLayer *menuItemLayer = [CATextLayer layer];
-		 menuItemLayer.string = [names objectAtIndex:i];
-		 menuItemLayer.font=@"Helvetica-Bold";
-		 menuItemLayer.fontSize=12;
-		 menuItemLayer.foregroundColor=whiteColor;
-		 [menuItemLayer addConstraint:[CAConstraint
-									   constraintWithAttribute:kCAConstraintMidX
-									   relativeTo:@"superlayer"
-									   attribute:kCAConstraintMidX]];
-		 [menuItemLayer addConstraint:[CAConstraint
-									   constraintWithAttribute:kCAConstraintMinY
-									   relativeTo:@"superlayer"
-									   attribute:kCAConstraintMinY
-									   offset: 0]];	
-		 
-		 [buttonLayer addSublayer:menuItemLayer];
-		 
-		 CALayer *iconLayer = [CALayer layer];
-		 iconLayer.contents = [NSImage imageNamed:[NSString stringWithFormat:@"icon_%@_off.png",[[names objectAtIndex:i] lowercaseString]]];
-		 [iconLayer addConstraint:[CAConstraint
-								   constraintWithAttribute:kCAConstraintMidX
+		 CALayer* testLayer = [CALayer layer];
+		 [testLayer setFrame:CGRectMake(0,0, 200, 200)];
+		 [testLayer addConstraint:[CAConstraint
+								   constraintWithAttribute:kCAConstraintMaxX
 								   relativeTo:@"superlayer"
-								   attribute:kCAConstraintMidX]];
-		 [iconLayer addConstraint:[CAConstraint
-									   constraintWithAttribute:kCAConstraintMinY
-									   relativeTo:@"superlayer"
-									   attribute:kCAConstraintMinY
-									   offset: 12]];	
-		 iconLayer.frame = CGRectMake(0, 0, 35, 35);
-		 [buttonLayer addSublayer:iconLayer];
-		
-		 NSMutableDictionary *newActions = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[NSNull null], @"position",
-											[NSNull null], @"frame",
-											[NSNull null], @"bounds",
-											nil];
-		 buttonLayer.actions = newActions;
-		 [newActions release];
+								   attribute:kCAConstraintMaxX
+								   offset:40 - (80 * i)]];
+		 [testLayer addConstraint:[CAConstraint
+								   constraintWithAttribute:kCAConstraintMinY
+								   relativeTo:@"superlayer"
+								   attribute:kCAConstraintMinY
+								   offset: 62]];
+		 testLayer.borderWidth = 2;
+		 testLayer.borderColor = CGColorCreateGenericRGB(0.5f,0.5f,0.5f,0.7f);
+		 testLayer.backgroundColor = CGColorCreateGenericRGB(0.0f,0.0f,0.0f,0.7f);
+		 testLayer.cornerRadius = 10;
 		 
-		// [buttonLayer setAutoresizingMask:kCALayerMinXMargin];
+		 [testLayer setHidden:TRUE];
 		 
-		 [menuLayer addSublayer:buttonLayer];
-	 }
+		ALUIButton* buttonLayer = [[ALUIButton alloc] initWithTitle:[names objectAtIndex:i] 
+ 																		frame:CGRectMake(-(20 + (80 * i)), 8, 80, 50)
+																		layer:testLayer];
+		[menuLayer addSublayer:buttonLayer];
+		[rootLayer addSublayer:testLayer];
+	}
 	
 	//add zoom controls
 	int height = 150;
@@ -134,31 +99,14 @@
 							  attribute:kCAConstraintMaxY
 							  offset: -50]];
 	
-	
-	CALayer* plusLayer = [CALayer layer];
-	[plusLayer setContents:[NSImage imageNamed:@"plus.png"]];
-	plusLayer.frame = CGRectMake(0, 0, 22, 24);
-	[plusLayer addConstraint:[CAConstraint
-							  constraintWithAttribute:kCAConstraintMidX
-							  relativeTo:@"superlayer"
-							  attribute:kCAConstraintMidX]];
-	[plusLayer addConstraint:[CAConstraint
-							  constraintWithAttribute:kCAConstraintMaxY
-							  relativeTo:@"superlayer"
-							  attribute:kCAConstraintMaxY]];
-	
-	CALayer* minusLayer = [CALayer layer];
-	[minusLayer setContents:[NSImage imageNamed:@"minus.png"]];
-	minusLayer.frame = CGRectMake(0, 0, 22, 24);
-	[minusLayer addConstraint:[CAConstraint
-							  constraintWithAttribute:kCAConstraintMidX
-							  relativeTo:@"superlayer"
-							  attribute:kCAConstraintMidX]];
-	[minusLayer addConstraint:[CAConstraint
-							  constraintWithAttribute:kCAConstraintMinY
-							  relativeTo:@"superlayer"
-							  attribute:kCAConstraintMinY]];
-	
+	ALUIControl* plusLayer = [[ALUIControl alloc] initWithValue:1
+														  frame:CGRectMake(0, 0, 22, 24)
+															delegate:self];
+	ALUIControl* minusLayer = [[ALUIControl alloc] initWithValue:-1
+														  frame:CGRectMake(0, 0, 22, 24)
+														delegate:self];
+
+
 	CALayer* lineLayer = [CALayer layer];
 	[lineLayer setContents:[NSImage imageNamed:@"line.png"]];
 	lineLayer.frame = CGRectMake(0, 0, 5, height - 50);
@@ -200,47 +148,77 @@
 
 - (void) drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
 	[self lockFocus];	
-	[drawer drawMap:currentType InContext:ctx  viewRect:NSRectToCGRect([self bounds])];
+	[drawer drawMap:currentType InContext:ctx viewRect:NSRectToCGRect([self bounds])];
 	[self unlockFocus];
 }
 
 - (void)mouseDown:(NSEvent *)event
 {
-    NSPoint p = [event locationInWindow];
-	CALayer* hitLayer = [rootLayer hitTest:p];
+	p = [event locationInWindow];
 	
-	CATransform3D transform;
-    transform = CATransform3DMakeRotation(2*M_PI, 0, 0, 1.0);
-    
-    // Create a basic animation to animate the layer's transform
-    CABasicAnimation* animation;
-    animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-    
-    // Now assign the transform as the animation's value. While
-    // animating, CABasicAnimation will vary the transform
-    // attribute of its target, which for this transform will spin
-    // the target like a wheel on its z-axis. 
-    animation.toValue = [NSValue valueWithCATransform3D:transform];
-	
-    animation.duration = 2;  // two seconds
-    animation.cumulative = YES;
-		
-	[hitLayer addAnimation:animation forKey:@"opacity"];
-	
-	if([[hitLayer.contents name] isEqual:@"icon_location_off"]) {
-		[hitLayer setContents:[NSImage imageNamed:[NSString stringWithFormat:@"icon_location_on.png"]]];
-	}
-	else if([[hitLayer.contents name] isEqual:@"icon_location_on"]) {
-		[hitLayer setContents:[NSImage imageNamed:[NSString stringWithFormat:@"icon_location_off.png"]]];
+	if([[rootLayer hitTest:p] isKindOfClass:[ALUIControl class]]) {
+		[[rootLayer hitTest:p] hit];
 	}
 	else {
-		if([hitLayer opacity] < 1.0) {
-			[hitLayer setOpacity:1.0];
+		[hitLayer setFlag:FALSE];		
+		if([[rootLayer hitTest:p] isKindOfClass:[ALUIButton class]]) {
+			//hoe dit doen zonder warning te krijgen?
+			hitLayer = [rootLayer hitTest:p];
+			[hitLayer setFlag:TRUE];	
+		}
+		else if([[[rootLayer hitTest:p] superlayer] isKindOfClass:[ALUIButton class]]) {
+			hitLayer = [[rootLayer hitTest:p] superlayer];
+			[hitLayer setFlag:TRUE];	
 		}
 		else {
-			[hitLayer setOpacity:0.5];
+			// start tracking mouse
+			if(currentType == SkyView) {
+				trackingMouse = TRUE;
+				[[NSCursor openHandCursor] push];
+			}
 		}
 	}
+}
+
+- (void)mouseDragged:(NSEvent *)event
+{
+	if(trackingMouse == TRUE) {
+	NSPoint deltap = NSMakePoint([event locationInWindow].x - p.x, [event locationInWindow].y - p.y);
+	p = [event locationInWindow];
+	
+	Pos tmpPos = [drawer origin];
+	
+	//radians on half the view width
+	float rad =  M_PI / [drawer zoomValue];
+	//degrees on half the view width
+	float deg =  90 / [drawer zoomValue];
+	tmpPos.ra -= ((deltap.x / ([self frame].size.width / 2)) * rad);
+	tmpPos.dec -= ((deltap.y / ([self frame].size.height / 2)) * deg);
+	
+	[drawer setOrigin:tmpPos];
+	}
+}
+
+- (void)mouseUp:(NSEvent *)theEvent {
+	[[NSCursor arrowCursor] push];
+	trackingMouse = FALSE;
+}
+
+- (void)scrollWheel:(NSEvent *)theEvent {
+	NSLog(@"%f", [theEvent deltaY]);
+	if([theEvent deltaY] == 0) return;
+	if([theEvent deltaY] > 0) {
+		[drawer setZoomValue:[drawer zoomValue] + 0.25];
+
+	} else {
+		[drawer setZoomValue:[drawer zoomValue] - 0.25];
+	}
+}
+
+
+-(void)zoomHitValue:(NSNumber*)aValue {
+	[drawer setZoomValue:[drawer zoomValue] + ([aValue floatValue] / 4)];
+	NSLog(@"%f", [drawer zoomValue]);
 }
 
 

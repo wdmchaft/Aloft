@@ -30,6 +30,13 @@
 		AC94C29B127340A500478872 /* AloftAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C294127340A500478872 /* AloftAppDelegate.m */; };
 		AC94C29C127340A500478872 /* ALTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94C296127340A500478872 /* ALTimeManager.m */; };
 		AC94C2A0127340B800478872 /* database.db in Resources */ = {isa = PBXBuildFile; fileRef = AC94C29E127340B800478872 /* database.db */; };
+		AC9B8B5D1277403500829B81 /* ALUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9B8B5C1277403500829B81 /* ALUIButton.m */; };
+		AC9B8C6812774F7B00829B81 /* icon_reference_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9B8C6312774F7B00829B81 /* icon_reference_on.png */; };
+		AC9B8C6912774F7B00829B81 /* icon_settings_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9B8C6412774F7B00829B81 /* icon_settings_on.png */; };
+		AC9B8C6A12774F7B00829B81 /* icon_sun_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9B8C6512774F7B00829B81 /* icon_sun_on.png */; };
+		AC9B8C6B12774F7B00829B81 /* icon_time_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9B8C6612774F7B00829B81 /* icon_time_on.png */; };
+		AC9B8C6C12774F7B00829B81 /* icon_view_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9B8C6712774F7B00829B81 /* icon_view_on.png */; };
+		AC9B8CAE1277544200829B81 /* ALUIControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9B8CAD1277544200829B81 /* ALUIControl.m */; };
 		DC1A1B7112721A6C00591ADA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */; };
 		DC7B5FB012722A4800A2929C /* cmath.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7B5FAF12722A4800A2929C /* cmath.m */; };
 		DCE08A971274D10300B15764 /* constellation_lines.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCE08A961274D10300B15764 /* constellation_lines.txt */; };
@@ -70,6 +77,15 @@
 		AC94C295127340A500478872 /* ALTimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALTimeManager.h; path = Classes/ALTimeManager.h; sourceTree = "<group>"; };
 		AC94C296127340A500478872 /* ALTimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALTimeManager.m; path = Classes/ALTimeManager.m; sourceTree = "<group>"; };
 		AC94C29E127340B800478872 /* database.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = database.db; path = Data/database.db; sourceTree = "<group>"; };
+		AC9B8B5B1277403500829B81 /* ALUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUIButton.h; sourceTree = "<group>"; };
+		AC9B8B5C1277403500829B81 /* ALUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALUIButton.m; sourceTree = "<group>"; };
+		AC9B8C6312774F7B00829B81 /* icon_reference_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_reference_on.png; path = Resources/Images/Backgrounds/Nav/icon_reference_on.png; sourceTree = "<group>"; };
+		AC9B8C6412774F7B00829B81 /* icon_settings_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_settings_on.png; path = Resources/Images/Backgrounds/Nav/icon_settings_on.png; sourceTree = "<group>"; };
+		AC9B8C6512774F7B00829B81 /* icon_sun_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_sun_on.png; path = Resources/Images/Backgrounds/Nav/icon_sun_on.png; sourceTree = "<group>"; };
+		AC9B8C6612774F7B00829B81 /* icon_time_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_time_on.png; path = Resources/Images/Backgrounds/Nav/icon_time_on.png; sourceTree = "<group>"; };
+		AC9B8C6712774F7B00829B81 /* icon_view_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_view_on.png; path = Resources/Images/Backgrounds/Nav/icon_view_on.png; sourceTree = "<group>"; };
+		AC9B8CAC1277544200829B81 /* ALUIControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUIControl.h; sourceTree = "<group>"; };
+		AC9B8CAD1277544200829B81 /* ALUIControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALUIControl.m; sourceTree = "<group>"; };
 		DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DC7B5FAE12722A4800A2929C /* cmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmath.h; sourceTree = "<group>"; };
 		DC7B5FAF12722A4800A2929C /* cmath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmath.m; sourceTree = "<group>"; };
@@ -174,6 +190,11 @@
 				AC1518F11275FFD400E15888 /* icon_reference_off.png */,
 				AC15197E127604BC00E15888 /* icon_location_off.png */,
 				AC15197F127604BC00E15888 /* icon_settings_off.png */,
+				AC9B8C6312774F7B00829B81 /* icon_reference_on.png */,
+				AC9B8C6412774F7B00829B81 /* icon_settings_on.png */,
+				AC9B8C6512774F7B00829B81 /* icon_sun_on.png */,
+				AC9B8C6612774F7B00829B81 /* icon_time_on.png */,
+				AC9B8C6712774F7B00829B81 /* icon_view_on.png */,
 				AC151980127604BC00E15888 /* icon_sun_off.png */,
 				AC23680B1276389B00B27ED9 /* icon_location_on.png */,
 				AC151981127604BC00E15888 /* icon_time_off.png */,
@@ -223,6 +244,7 @@
 		AC94C2A71273412C00478872 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC9B8B5A1277402600829B81 /* Layers */,
 				AC94C28F127340A500478872 /* ALMapView.h */,
 				AC94C290127340A500478872 /* ALMapView.m */,
 			);
@@ -247,6 +269,17 @@
 				DC7B5FAF12722A4800A2929C /* cmath.m */,
 			);
 			name = Math;
+			sourceTree = "<group>";
+		};
+		AC9B8B5A1277402600829B81 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				AC9B8B5B1277403500829B81 /* ALUIButton.h */,
+				AC9B8B5C1277403500829B81 /* ALUIButton.m */,
+				AC9B8CAC1277544200829B81 /* ALUIControl.h */,
+				AC9B8CAD1277544200829B81 /* ALUIControl.m */,
+			);
+			name = Layers;
 			sourceTree = "<group>";
 		};
 		DC7B5ECD12721FB100A2929C /* Data */ = {
@@ -336,6 +369,11 @@
 				AC2366C41276261F00B27ED9 /* slider.png in Resources */,
 				AC2366F11276287E00B27ED9 /* line.png in Resources */,
 				AC23680C1276389B00B27ED9 /* icon_location_on.png in Resources */,
+				AC9B8C6812774F7B00829B81 /* icon_reference_on.png in Resources */,
+				AC9B8C6912774F7B00829B81 /* icon_settings_on.png in Resources */,
+				AC9B8C6A12774F7B00829B81 /* icon_sun_on.png in Resources */,
+				AC9B8C6B12774F7B00829B81 /* icon_time_on.png in Resources */,
+				AC9B8C6C12774F7B00829B81 /* icon_view_on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +391,8 @@
 				AC94C299127340A500478872 /* ALMapView.m in Sources */,
 				AC94C29B127340A500478872 /* AloftAppDelegate.m in Sources */,
 				AC94C29C127340A500478872 /* ALTimeManager.m in Sources */,
+				AC9B8B5D1277403500829B81 /* ALUIButton.m in Sources */,
+				AC9B8CAE1277544200829B81 /* ALUIControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
