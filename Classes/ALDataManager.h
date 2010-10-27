@@ -19,10 +19,16 @@ struct Star {
 	float mag;
 };
 
-typedef struct Constellation {
+struct Planet {
+	NSString* name;
+	CGColorRef color;
+	Pos pos;
+	//variables
+};
+
+struct Constellation {
 	NSString* name;
 	Pos pos;
-	int size;
 } Constellation;
 
 @interface ALDataManager : NSObject {
@@ -36,7 +42,7 @@ typedef struct Constellation {
 + (id)shared;
 - (void)getData;
 - (NSMutableArray*)stars;
-- (NSArray*)constellations;
+- (NSMutableArray*)constellations;
 - (NSMutableArray*)positions;
 
 @end

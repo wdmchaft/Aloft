@@ -17,7 +17,7 @@
 		on = FALSE;
 		view = theLayer;
 		
-		CGColorRef whiteColor=CGColorCreateGenericRGB(1.0f,1.0f,1.0f,1.0f);
+		CGColorRef grayColor=CGColorCreateGenericRGB(0.4f,0.4f,0.4f,1.0f);
 		
 		self.frame = CGRectMake(0, 0, theFrame.size.width, theFrame.size.height);
 		self.layoutManager = [CAConstraintLayoutManager layoutManager];
@@ -38,7 +38,7 @@
 		textLayer.string = title;
 		textLayer.font=@"Helvetica-Bold";
 		textLayer.fontSize=12;
-		textLayer.foregroundColor=whiteColor;
+		textLayer.foregroundColor=grayColor;
 		[textLayer addConstraint:[CAConstraint
 									  constraintWithAttribute:kCAConstraintMidX
 									  relativeTo:@"superlayer"
@@ -79,11 +79,15 @@
 	on = turnOn;
 	if(on == FALSE) {
 	//set off	
+		CGColorRef grayColor=CGColorCreateGenericRGB(0.4f,0.4f,0.4f,1.0f);
+		textLayer.foregroundColor=grayColor;
 		iconLayer.contents = [NSImage imageNamed:[NSString stringWithFormat:@"icon_%@_off.png",[title lowercaseString]]];
 		view.hidden = YES;
 	}
 	else if(on == TRUE) {
 	//set on
+		CGColorRef whiteColor=CGColorCreateGenericRGB(1.0f,1.0f,1.0f,1.0f);
+		textLayer.foregroundColor=whiteColor;
 		iconLayer.contents = [NSImage imageNamed:[NSString stringWithFormat:@"icon_%@_on.png",[title lowercaseString]]];
 		view.hidden = NO;
 	}

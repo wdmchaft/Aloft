@@ -26,6 +26,7 @@ static id sharedManager = nil;
 		dbPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:dbName];
 		stars = [[NSMutableArray alloc] init];
 		positions = [[NSMutableArray alloc] init];
+		constellations = [[NSMutableArray alloc] init];
 		[self getData];
 	}
 	
@@ -101,9 +102,57 @@ static id sharedManager = nil;
 		sqlite3_finalize(compiledStatement);
 	}
 	
+	//get names and positions for labels
+	NSMutableArray* stringArray = [[NSMutableArray arrayWithCapacity:1] retain]; 
+	fullPath = [[NSBundle mainBundle] pathForResource:@"constellation_positions" ofType:@"txt"];
+	fileContents = [NSString stringWithContentsOfFile:fullPath encoding:NSUTF8StringEncoding error:&e];//Assuming UTF8 encoding
+	if (fileContents){
+		NSEnumerator * lineEnumerator = [[fileContents componentsSeparatedByString:@"\n" ] objectEnumerator]; 
+		NSString * enumeratedLine; 
+		// Prepare to process each line of numbers 
+		NSEnumerator * numberEnumerator; 
+					
+		while (enumeratedLine = [lineEnumerator nextObject]) { 
+			numberEnumerator = [[enumeratedLine componentsSeparatedByString:@" "] objectEnumerator]; 
+			NSString* string;
+			while (string = [numberEnumerator nextObject]) { 
+				[stringArray addObject:[NSString stringWithString:string]]; 
+			} 
+		} 
+	}
+	else{ NSLog(@"error # %i : %@", [e code], [e localizedDescription]); }
+	
+	for(int i = 0; i < [stringArray count] - 3; i += 3) {	
+		float ra, dec;
+		NSScanner* scanner = [NSScanner scannerWithString:[stringArray objectAtIndex:i + 1]];
+		[scanner scanFloat: &ra];
+		scanner = [NSScanner scannerWithString:[stringArray objectAtIndex:i + 2]];
+		[scanner scanFloat: &dec];
+
+		
+		struct Pos position;
+		struct Constellation aConstellation;
+		aConstellation.name = [stringArray objectAtIndex:i];
+		position.ra = ra;
+		position.dec = 180 - dec;
+		aConstellation.pos = position;
+		
+		//NSLog(@"%@, %f, %f", aConstellation.name, position.ra, position.dec);
+		
+		NSValue *boxedConst = [NSValue valueWithBytes:&aConstellation objCType:@encode(struct Constellation)];
+		[constellations addObject:boxedConst];
+	}
+	
 	NSLog(@".. done");
 	
 	sqlite3_close(database);
+	
+	//planets
+	
+}
+
+-(NSArray*)planets {
+	return nil;
 }
 
 -(NSMutableArray*)stars {
@@ -113,7 +162,7 @@ static id sharedManager = nil;
 -(NSMutableArray*)positions {
 	return positions;
 }
--(NSArray*)constellations {
+-(NSMutableArray*)constellations {
 	return constellations;
 }
 

@@ -37,6 +37,7 @@
 		AC9B8C6B12774F7B00829B81 /* icon_time_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9B8C6612774F7B00829B81 /* icon_time_on.png */; };
 		AC9B8C6C12774F7B00829B81 /* icon_view_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AC9B8C6712774F7B00829B81 /* icon_view_on.png */; };
 		AC9B8CAE1277544200829B81 /* ALUIControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9B8CAD1277544200829B81 /* ALUIControl.m */; };
+		ACC2C9E1127882280085A47B /* constellation_positions.txt in Resources */ = {isa = PBXBuildFile; fileRef = ACC2C9E0127882280085A47B /* constellation_positions.txt */; };
 		DC1A1B7112721A6C00591ADA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */; };
 		DC7B5FB012722A4800A2929C /* cmath.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7B5FAF12722A4800A2929C /* cmath.m */; };
 		DCE08A971274D10300B15764 /* constellation_lines.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCE08A961274D10300B15764 /* constellation_lines.txt */; };
@@ -86,6 +87,7 @@
 		AC9B8C6712774F7B00829B81 /* icon_view_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_view_on.png; path = Resources/Images/Backgrounds/Nav/icon_view_on.png; sourceTree = "<group>"; };
 		AC9B8CAC1277544200829B81 /* ALUIControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUIControl.h; sourceTree = "<group>"; };
 		AC9B8CAD1277544200829B81 /* ALUIControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALUIControl.m; sourceTree = "<group>"; };
+		ACC2C9E0127882280085A47B /* constellation_positions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = constellation_positions.txt; path = Data/constellation_positions.txt; sourceTree = "<group>"; };
 		DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DC7B5FAE12722A4800A2929C /* cmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmath.h; sourceTree = "<group>"; };
 		DC7B5FAF12722A4800A2929C /* cmath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmath.m; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			children = (
 				AC94C29E127340B800478872 /* database.db */,
 				DCE08A961274D10300B15764 /* constellation_lines.txt */,
+				ACC2C9E0127882280085A47B /* constellation_positions.txt */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				AC9B8C6A12774F7B00829B81 /* icon_sun_on.png in Resources */,
 				AC9B8C6B12774F7B00829B81 /* icon_time_on.png in Resources */,
 				AC9B8C6C12774F7B00829B81 /* icon_view_on.png in Resources */,
+				ACC2C9E1127882280085A47B /* constellation_positions.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
