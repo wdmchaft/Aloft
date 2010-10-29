@@ -76,12 +76,14 @@
 			
 			
 			//test with text
-			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(0.18, 0.205, 0.245, 1.0)); 
+			CGColorRef bgColor = CGColorCreateGenericRGB(0.18, 0.205, 0.245, 1.0); 
+			CGContextSetFillColorWithColor(context, bgColor);
+			CFRelease(bgColor);
+			
 			CGContextSelectFont (context, "Didot" , 8, kCGEncodingMacRoman);
 			CGContextSetCharacterSpacing(context, 3);
 			CGContextSetTextDrawingMode (context, kCGTextFill);
 			CGContextSetLineWidth(context, 0.5);
-			CGContextSetShadow(context, CGSizeMake(0, 0), 3);
 			
 			for(int i = 0; i < [constellations count]; ++i) {
 			//draw constellation text test
@@ -140,7 +142,10 @@
 			CGContextStrokePath(context);
 			
 			//draw stars
-			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.9));
+			CGColorRef color = CGColorCreateGenericRGB( 1.0, 1.0, 1.0, 0.9 );				
+			CGContextSetFillColorWithColor(context, color);
+			CFRelease(color);
+			
 			for(int i = 0; i < [stars count]; ++i) {
 				NSValue* boxedStar = [stars objectAtIndex:i];
 				struct Star aStar;
@@ -152,9 +157,12 @@
 				else if(aStar.mag < 3.0) { size = 3; }
 				else { size = 1; }
 				
-				if(aStar.mag < 3.0) { CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.9)); }
-				else { CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.5)); } // CHANGE THIS, USE SORTY BY MAG
-								
+				CGColorRef color = CGColorCreateGenericRGB( 1.0, 1.0, 1.0, 0.9 );				
+				CGColorRef color2 = CGColorCreateGenericRGB( 1.0, 1.0, 1.0, 0.4 );				
+				if(aStar.mag < 3.0) { CGContextSetFillColorWithColor(context, color); }
+				else { CGContextSetFillColorWithColor(context, color2); } // CHANGE THIS, USE SORTY BY MAG
+				CFRelease(color);
+
 				float azimuth = computeAzimuth(h, aStar.pos.ra, aStar.pos.dec, 0.90754, 0.08722);
 				float altitude = computeAltitude(h, aStar.pos.ra, aStar.pos.dec, 0.90754, 0.08722);
 				
