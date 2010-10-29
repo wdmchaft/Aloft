@@ -77,8 +77,8 @@
 					PBXSymbolsDataSource_ReferenceNameID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 310079905;
-			PBXWorkspaceStateSaveDate = 310079905;
+			PBXPerProjectTemplateStateSaveDate = 310084326;
+			PBXWorkspaceStateSaveDate = 310084326;
 		};
 		perUserProjectItems = {
 			AC1518C71275FC5300E15888 /* PBXBookmark */ = AC1518C71275FC5300E15888 /* PBXBookmark */;
@@ -92,21 +92,21 @@
 			AC9B5495127B78A10038D8A4 /* PBXTextBookmark */ = AC9B5495127B78A10038D8A4 /* PBXTextBookmark */;
 			AC9B54AA127B798C0038D8A4 /* PBXTextBookmark */ = AC9B54AA127B798C0038D8A4 /* PBXTextBookmark */;
 			AC9B54AB127B798C0038D8A4 /* PBXTextBookmark */ = AC9B54AB127B798C0038D8A4 /* PBXTextBookmark */;
-			AC9B54AC127B798C0038D8A4 /* PBXTextBookmark */ = AC9B54AC127B798C0038D8A4 /* PBXTextBookmark */;
 			AC9B54AD127B798C0038D8A4 /* PBXTextBookmark */ = AC9B54AD127B798C0038D8A4 /* PBXTextBookmark */;
 			AC9B54CA127B7C630038D8A4 /* PBXTextBookmark */ = AC9B54CA127B7C630038D8A4 /* PBXTextBookmark */;
 			AC9B54CB127B7C630038D8A4 /* PBXTextBookmark */ = AC9B54CB127B7C630038D8A4 /* PBXTextBookmark */;
 			AC9B54F6127B803E0038D8A4 /* PBXTextBookmark */ = AC9B54F6127B803E0038D8A4 /* PBXTextBookmark */;
 			AC9B54F7127B803E0038D8A4 /* PBXTextBookmark */ = AC9B54F7127B803E0038D8A4 /* PBXTextBookmark */;
 			AC9B5502127B80E60038D8A4 /* PBXTextBookmark */ = AC9B5502127B80E60038D8A4 /* PBXTextBookmark */;
-			AC9B5508127B810D0038D8A4 /* PBXTextBookmark */ = AC9B5508127B810D0038D8A4 /* PBXTextBookmark */;
-			AC9B550C127B813E0038D8A4 /* PBXTextBookmark */ = AC9B550C127B813E0038D8A4 /* PBXTextBookmark */;
-			AC9B550E127B813E0038D8A4 /* PBXTextBookmark */ = AC9B550E127B813E0038D8A4 /* PBXTextBookmark */;
 			AC9B8C711277507B00829B81 /* PBXBookmark */ = AC9B8C711277507B00829B81 /* PBXBookmark */;
 			AC9B8C721277507B00829B81 /* PBXBookmark */ = AC9B8C721277507B00829B81 /* PBXBookmark */;
 			AC9B8CC6127757D000829B81 /* PBXTextBookmark */ = AC9B8CC6127757D000829B81 /* PBXTextBookmark */;
 			ACC2CA0D127887500085A47B /* PBXTextBookmark */ = ACC2CA0D127887500085A47B /* PBXTextBookmark */;
 			ACC2CA0E127887500085A47B /* PBXTextBookmark */ = ACC2CA0E127887500085A47B /* PBXTextBookmark */;
+			ACDE08C6127B830E00E93DF9 /* PBXTextBookmark */ = ACDE08C6127B830E00E93DF9 /* PBXTextBookmark */;
+			ACDE08DA127B849A00E93DF9 /* PBXTextBookmark */ = ACDE08DA127B849A00E93DF9 /* PBXTextBookmark */;
+			ACDE08DB127B849A00E93DF9 /* PBXTextBookmark */ = ACDE08DB127B849A00E93DF9 /* PBXTextBookmark */;
+			ACDE08DC127B849A00E93DF9 /* PBXTextBookmark */ = ACDE08DC127B849A00E93DF9 /* PBXTextBookmark */;
 		};
 		sourceControlManager = AC203B3912725E2400DFA430 /* Source Control */;
 		userBuildSettings = {
@@ -220,9 +220,9 @@
 	};
 	AC94C28C127340A500478872 /* ALDataManager.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1008, 3107}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1489, 2990}}";
 			sepNavSelRange = "{1115, 0}";
-			sepNavVisRange = "{352, 1769}";
+			sepNavVisRange = "{2787, 2202}";
 		};
 	};
 	AC94C28D127340A500478872 /* ALDrawer.h */ = {
@@ -234,9 +234,9 @@
 	};
 	AC94C28E127340A500478872 /* ALDrawer.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1349, 4251}}";
-			sepNavSelRange = "{3809, 0}";
-			sepNavVisRange = "{3343, 960}";
+			sepNavIntBoundsRect = "{{0, 0}, {1349, 4602}}";
+			sepNavSelRange = "{1720, 0}";
+			sepNavVisRange = "{0, 1317}";
 			sepNavWindowFrame = "{{19, 465}, {750, 558}}";
 		};
 	};
@@ -249,9 +249,9 @@
 	};
 	AC94C290127340A500478872 /* ALMapView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1008, 3510}}";
-			sepNavSelRange = "{7927, 26}";
-			sepNavVisRange = "{6918, 1204}";
+			sepNavIntBoundsRect = "{{0, 0}, {1008, 3471}}";
+			sepNavSelRange = "{5978, 0}";
+			sepNavVisRange = "{5048, 1404}";
 		};
 	};
 	AC94C293127340A500478872 /* AloftAppDelegate.h */ = {
@@ -339,16 +339,6 @@
 		vrLen = 828;
 		vrLoc = 23;
 	};
-	AC9B54AC127B798C0038D8A4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = AC94C28C127340A500478872 /* ALDataManager.m */;
-		name = "ALDataManager.m: 31";
-		rLen = 0;
-		rLoc = 739;
-		rType = 0;
-		vrLen = 1769;
-		vrLoc = 352;
-	};
 	AC9B54AD127B798C0038D8A4 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = AC94C28D127340A500478872 /* ALDrawer.h */;
@@ -408,36 +398,6 @@
 		rType = 0;
 		vrLen = 696;
 		vrLoc = 0;
-	};
-	AC9B5508127B810D0038D8A4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = AC94C28E127340A500478872 /* ALDrawer.m */;
-		name = "ALDrawer.m: 23";
-		rLen = 0;
-		rLoc = 372;
-		rType = 0;
-		vrLen = 1242;
-		vrLoc = 0;
-	};
-	AC9B550C127B813E0038D8A4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = AC94C290127340A500478872 /* ALMapView.m */;
-		name = "ALMapView.m: 260";
-		rLen = 26;
-		rLoc = 7927;
-		rType = 0;
-		vrLen = 1204;
-		vrLoc = 6918;
-	};
-	AC9B550E127B813E0038D8A4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = AC94C28C127340A500478872 /* ALDataManager.m */;
-		name = "ALDataManager.m: 46";
-		rLen = 0;
-		rLoc = 1115;
-		rType = 0;
-		vrLen = 1769;
-		vrLoc = 352;
 	};
 	AC9B8B5B1277403500829B81 /* ALUIButton.h */ = {
 		uiCtxt = {
@@ -511,6 +471,46 @@
 		rType = 0;
 		vrLen = 4796;
 		vrLoc = 0;
+	};
+	ACDE08C6127B830E00E93DF9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C28C127340A500478872 /* ALDataManager.m */;
+		name = "ALDataManager.m: 46";
+		rLen = 0;
+		rLoc = 1115;
+		rType = 0;
+		vrLen = 2202;
+		vrLoc = 2787;
+	};
+	ACDE08DA127B849A00E93DF9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C28E127340A500478872 /* ALDrawer.m */;
+		name = "ALDrawer.m: 66";
+		rLen = 0;
+		rLoc = 1720;
+		rType = 0;
+		vrLen = 1317;
+		vrLoc = 0;
+	};
+	ACDE08DB127B849A00E93DF9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 260";
+		rLen = 26;
+		rLoc = 7988;
+		rType = 0;
+		vrLen = 1243;
+		vrLoc = 6879;
+	};
+	ACDE08DC127B849A00E93DF9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AC94C290127340A500478872 /* ALMapView.m */;
+		name = "ALMapView.m: 186";
+		rLen = 0;
+		rLoc = 5978;
+		rType = 0;
+		vrLen = 1404;
+		vrLoc = 5048;
 	};
 	DC7B5FAE12722A4800A2929C /* cmath.h */ = {
 		uiCtxt = {

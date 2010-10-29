@@ -156,6 +156,9 @@
 	[self lockFocus];	
 	[drawer drawMap:currentType InContext:ctx viewRect:NSRectToCGRect([self bounds])];
 	[self unlockFocus];
+	
+	[rootLayer layoutIfNeeded];
+	[rootLayer setNeedsDisplay];
 }
 
 - (void)mouseDown:(NSEvent *)event

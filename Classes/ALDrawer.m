@@ -42,7 +42,7 @@
 	NSMutableArray* constellationNames = [[ALDataManager shared] constellationNames];
 	NSMutableArray* planets = [[ALDataManager shared] planets];
 
-	CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(0.05, 0.05, 0.05, 1.0));
+	CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(0.00, 0.00, 0.00, 1.0));
 	CGContextSetStrokeColorWithColor(context, CGColorCreateGenericRGB(0.1, 0.1, 0.1, 1.0));
 	CGContextSetLineWidth(context, 1.0);
 	CGContextFillRect(context, viewRect);		
@@ -61,9 +61,9 @@
 			
 			size_t num_locations = 3;
 			 CGFloat locations[3] = { 1.0, 0.5, 0.0 };
-			 CGFloat components[12] = {0.0, 0.05, 0.0, 1.0, 
+			 CGFloat components[12] = {0.0, 0.00, 0.0, 1.0, 
 			 0.1, 0.0, 0.1, 1.0,
-			 0.0, 0.05, 0.0, 1.0};
+			 0.0, 0.00, 0.0, 1.0};
 			 
 			 CGColorSpaceRef myColorspace = CGColorSpaceCreateDeviceRGB(); 
 			
