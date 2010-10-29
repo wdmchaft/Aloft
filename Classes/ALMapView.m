@@ -14,9 +14,7 @@
 @synthesize currentType;
 
 -(void)awakeFromNib {
-	//[self enterFullScreenMode:[self.window screen] withOptions:NULL];
-	zoomValue = 1;
-	
+	//[self enterFullScreenMode:[self.window screen] withOptions:NULL];	
 	drawer = [[ALDrawer alloc] init];
 	currentType = SkyView;
 	updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.075 target:self selector:@selector(update:) userInfo:nil repeats:YES];

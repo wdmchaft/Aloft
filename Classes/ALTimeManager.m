@@ -44,6 +44,12 @@ static id sharedManager = nil;
 	return elapsed;
 }
 
+-(float)julianDay {
+	NSTimeInterval J = [simulatedDate timeIntervalSinceDate:[[NSDate alloc] initWithString:@"2000-01-01 00:00:00 +0000"]]; 
+	float dJ = J / 86400;
+	return dJ;
+}
+
 -(id)init {
 	if(self = [super init]) {
 		timeTest = [NSTimer scheduledTimerWithTimeInterval:0.075 target:self selector:@selector(calculateDate:) userInfo:nil repeats:YES];
@@ -62,10 +68,8 @@ static id sharedManager = nil;
     NSTimeInterval simulatedInterval = [simulatedDate timeIntervalSinceNow];
 	//NSLog(@"simInterval: %@",[simulatedDate description]);
 	
-    [simulatedDate release];
     simulatedDate = [[NSDate alloc] initWithTimeIntervalSinceNow:simulatedInterval + (interval * speed)];
     
-    [actualDate release];
     actualDate = [[NSDate alloc] init]; 
 } 
 

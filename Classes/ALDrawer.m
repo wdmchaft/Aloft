@@ -23,16 +23,9 @@
 
 -(id)init {
 	if(self = [super init]) {
-		zoomValue = 1;
+		zoomValue = 2;
 		origin.ra = M_PI;
-		origin.dec = 0;
-		srand(time(NULL));
-		for(int i = 0; i < 88; ++i) {
-			Pos tmpPos;
-			tmpPos.ra = (((rand() % 628) + 1) / 100);
-			tmpPos.dec = (((rand() % 18000) + 1));
-			constellationpos[i] = tmpPos;	
-		}
+		origin.dec = 30;
 	}
 	return self;
 }
@@ -41,7 +34,8 @@
 	NSMutableArray* stars = [[ALDataManager shared] stars];
 	NSMutableArray* positions = [[ALDataManager shared] positions];
 	NSMutableArray* constellations = [[ALDataManager shared] constellations];
-	
+	NSMutableArray* planets = [[ALDataManager shared] planets];
+
 	CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(0.05, 0.05, 0.05, 1.0));
 	CGContextSetStrokeColorWithColor(context, CGColorCreateGenericRGB(0.1, 0.1, 0.1, 1.0));
 	CGContextSetLineWidth(context, 1.0);
@@ -49,7 +43,7 @@
 	float radius;
 	int size;
 	float h = [[ALTimeManager shared] elapsed];
-	float width = viewRect.size.width;
+	width = viewRect.size.width;
 	float height = viewRect.size.height;
 	
 	switch (viewType) {
@@ -57,6 +51,29 @@
 			radius = viewRect.size.height;
 			//geometric variables						
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 0.0, 0.0, 0.9));
+			
+			
+			size_t num_locations = 3;
+			 CGFloat locations[3] = { 1.0, 0.5, 0.0 };
+			 CGFloat components[12] = {0.0, 0.05, 0.0, 1.0, 
+			 0.1, 0.0, 0.1, 1.0,
+			 0.0, 0.05, 0.0, 1.0};
+			 
+			 CGColorSpaceRef myColorspace = CGColorSpaceCreateDeviceRGB(); 
+			
+			CGContextDrawLinearGradient(context, 
+			 CGGradientCreateWithColorComponents(myColorspace, components, locations, num_locations),
+			 CGPointMake(viewRect.size.width / 2 - ((origin.ra / M_PI) * zoomValue * (width / 2)), (height / 2) - ((origin.dec / 90)*height/2*zoomValue) - (zoomValue * (height / 2))),
+			 CGPointMake(viewRect.size.width / 2 - ((origin.ra / M_PI) * zoomValue * (width / 2)), (height / 2) - ((origin.dec / 90)*height/2*zoomValue) + (zoomValue * (height / 2))),
+										0);
+		
+			CGContextSetStrokeColorWithColor(context, CGColorCreateGenericRGB(0.3, 0.3, 0.3, 1.0));
+			CGContextBeginPath(context);
+			CGContextMoveToPoint(context, (width / 2) - (((origin.ra - M_PI) / M_PI)*(width/2)*zoomValue) - ((width/2) * zoomValue), (height / 2) - ((origin.dec / 90)*height/2*zoomValue));
+			CGContextAddLineToPoint(context, (width / 2) - (((origin.ra - M_PI) / M_PI)*(width/2)*zoomValue) + ((width/2) * zoomValue), (height / 2) - ((origin.dec / 90)*height/2*zoomValue));
+			CGContextClosePath(context);
+			CGContextStrokePath(context);
+			
 			
 			//test with text
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(0.18, 0.205, 0.245, 1.0)); 
@@ -122,6 +139,7 @@
 			CGContextSetLineWidth(context, 2.0);
 			CGContextStrokePath(context);
 			
+			//draw stars
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.9));
 			for(int i = 0; i < [stars count]; ++i) {
 				NSValue* boxedStar = [stars objectAtIndex:i];
@@ -148,25 +166,50 @@
 			}
 				
 			//draw planets
-			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 0.7, 0.7, 0.9));
-			float size = 5;
-			float azimuth = computeAzimuth(h, (22/12) * M_PI, -11, 0.90754, 0.08722);
-			float altitude = computeAltitude(h, (22/12) * M_PI, -11, 0.90754, 0.08722);
 			
-			CGContextFillEllipseInRect(context, 
-									   CGRectMake((width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)),
-												  (height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue)),
-												  size, 
-												  size));			
+			for(int i = 0; i < [planets count]; ++i) {
+				//draw constellation text test
+				ALPlanet* thePlanet = [planets objectAtIndex:i];
+				
+				CGContextSetFillColorWithColor(context, thePlanet.color);
+
+			float azimuth = computeAzimuth(h, thePlanet.ra, thePlanet.dec, 0.90754, 0.08722);
+			float altitude = computeAltitude(h, thePlanet.ra, thePlanet.dec, 0.90754, 0.08722);
 			
+				
+				CGColorSpaceRef myColorspace=CGColorSpaceCreateDeviceRGB();
+				size_t num_locations = 2;
+				CGFloat locations[2] = { 1.0, 0.0 };
+				CGFloat components[8] = {     
+				CGColorGetComponents(thePlanet.color)[0], 
+				CGColorGetComponents(thePlanet.color)[1], 
+				CGColorGetComponents(thePlanet.color)[2], 
+				CGColorGetComponents(thePlanet.color)[3], 1.0, 1.0, 1.0, 1.0};
+				
+				CGContextDrawRadialGradient(context, CGGradientCreateWithColorComponents(myColorspace, components, locations, num_locations),
+											CGPointMake((width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)),
+														(height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue))),
+														0, 
+											CGPointMake((width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)),
+														(height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue))),
+														thePlanet.size,
+											0);
 
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 1.0, 1.0, 1.0));
 			CGContextSelectFont (context, "Helvetica-Bold" , 11, kCGEncodingMacRoman);
 			CGContextSetCharacterSpacing(context, 1);
 			CGContextShowTextAtPoint(context, 
 									 (width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)) - 25,
-									 (height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue)) - 10,
-									 (const char*)"Jupiter", (size_t)7);	//[[[ALDataManager shared] constellations] objectAtIndex:i]
+									 (height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue)) - 15,
+									 [thePlanet.name UTF8String], (size_t)[thePlanet.name length]);	//[[[ALDataManager shared] constellations] objectAtIndex:i]
+			}
+			
+			//opacify stuff below the horizon
+			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(0.0, 0.0, 0.0, 0.5));
+			CGContextFillRect(context, CGRectMake((width / 2) - (((origin.ra - M_PI) / M_PI)*(width/2)*zoomValue) - ((width/2) * zoomValue),
+												  (height / 2) - ((origin.dec / 90)*height/2*zoomValue) - (zoomValue * (height / 2)),
+												  width*zoomValue,
+												  (height / 2) * zoomValue));
 			
 			break;
 		
@@ -265,6 +308,19 @@
 			break;
 	}
 	
+}
+
+-(void)setOrigin:(Pos)theOrigin {	
+	if(((width / 2) - (((theOrigin.ra - M_PI) / M_PI)*(width/2)*zoomValue) - ((width/2) * zoomValue)) > 0) {
+		theOrigin.ra = M_PI * (((width-width*zoomValue)/2)/((width*zoomValue)/2)) + M_PI;
+	}
+	else if((width / 2) - (((theOrigin.ra - M_PI) / M_PI)*(width/2)*zoomValue) + ((width/2) * zoomValue) - width < -0.01) {
+		theOrigin.ra =  M_PI * ((((-width+width*zoomValue)/2)/((width*zoomValue)/2))) + M_PI;
+	}
+	
+	NSLog(@"%f", (width / 2) - (((theOrigin.ra - M_PI) / M_PI)*(width/2)*zoomValue) + ((width/2) * zoomValue) - width);
+	
+	origin = theOrigin;
 }
 
 

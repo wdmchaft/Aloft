@@ -21,6 +21,7 @@
 @property(readwrite, assign) NSDate* simulatedDate;
 
 + (id)shared;
+-(float)julianDay;
 - (float)elapsed;
 -(void)ff;
 -(void)bb;

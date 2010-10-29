@@ -70,7 +70,6 @@
 										   [NSNull null], @"bounds",
 										   nil];
 		self.actions = newActions;
-		[newActions release]; 
 	}
 	return self;
 }

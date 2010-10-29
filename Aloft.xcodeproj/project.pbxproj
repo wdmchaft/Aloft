@@ -40,6 +40,7 @@
 		ACC2C9E1127882280085A47B /* constellation_positions.txt in Resources */ = {isa = PBXBuildFile; fileRef = ACC2C9E0127882280085A47B /* constellation_positions.txt */; };
 		DC1A1B7112721A6C00591ADA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */; };
 		DC7B5FB012722A4800A2929C /* cmath.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7B5FAF12722A4800A2929C /* cmath.m */; };
+		DCD3D25E127B15A700194144 /* ALPlanet.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD3D25D127B15A700194144 /* ALPlanet.m */; };
 		DCE08A971274D10300B15764 /* constellation_lines.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCE08A961274D10300B15764 /* constellation_lines.txt */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,8 @@
 		DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DC7B5FAE12722A4800A2929C /* cmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmath.h; sourceTree = "<group>"; };
 		DC7B5FAF12722A4800A2929C /* cmath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmath.m; sourceTree = "<group>"; };
+		DCD3D25C127B15A700194144 /* ALPlanet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPlanet.h; sourceTree = "<group>"; };
+		DCD3D25D127B15A700194144 /* ALPlanet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPlanet.m; sourceTree = "<group>"; };
 		DCE08A961274D10300B15764 /* constellation_lines.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = constellation_lines.txt; path = Data/constellation_lines.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,6 +300,7 @@
 		DC7B5FAC127229E600A2929C /* Celestial */ = {
 			isa = PBXGroup;
 			children = (
+				DCD3D262127B173B00194144 /* Objects */,
 				AC94C2A91273413B00478872 /* Math */,
 				AC94C2A81273413200478872 /* Managers */,
 				AC94C2A61273412600478872 /* Graphics */,
@@ -305,6 +309,15 @@
 				AC94C294127340A500478872 /* AloftAppDelegate.m */,
 			);
 			name = Celestial;
+			sourceTree = "<group>";
+		};
+		DCD3D262127B173B00194144 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				DCD3D25C127B15A700194144 /* ALPlanet.h */,
+				DCD3D25D127B15A700194144 /* ALPlanet.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +348,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Aloft" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -397,6 +411,7 @@
 				AC94C29C127340A500478872 /* ALTimeManager.m in Sources */,
 				AC9B8B5D1277403500829B81 /* ALUIButton.m in Sources */,
 				AC9B8CAE1277544200829B81 /* ALUIControl.m in Sources */,
+				DCD3D25E127B15A700194144 /* ALPlanet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +473,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
