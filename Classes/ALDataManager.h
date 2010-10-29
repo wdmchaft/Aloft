@@ -36,6 +36,7 @@ struct Constellation {
 	NSString* dbPath;
 	NSMutableArray* stars;
 	NSMutableArray* constellations;
+	NSMutableArray* constellationNames;
 	NSMutableArray* planets;
 	NSMutableArray* positions;
 
@@ -46,6 +47,7 @@ struct Constellation {
 - (NSMutableArray*)planets;
 - (NSMutableArray*)stars;
 - (NSMutableArray*)constellations;
+- (NSMutableArray*)constellationNames;
 - (NSMutableArray*)positions;
 
 @end

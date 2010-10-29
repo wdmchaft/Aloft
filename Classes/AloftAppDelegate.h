@@ -17,6 +17,7 @@
 	IBOutlet NSButton* skyViewButton;
 	IBOutlet NSButton* ffButton;
 	IBOutlet NSButton* bbButton;
+	IBOutlet NSButton* fullButton;
 
 	IBOutlet ALMapView* mapView;
 }
@@ -27,5 +28,6 @@
 - (IBAction)skyView:(id)sender;
 - (IBAction)ff:(id)sender;
 - (IBAction)bb:(id)sender;
+- (IBAction)toggleFullScreen:(id)sender;
 
 @end

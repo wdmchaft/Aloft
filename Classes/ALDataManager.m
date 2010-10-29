@@ -28,6 +28,7 @@ static id sharedManager = nil;
 		planets = [[NSMutableArray alloc] init];
 		positions = [[NSMutableArray alloc] init];
 		constellations = [[NSMutableArray alloc] init];
+		constellationNames = [[NSMutableArray alloc] init];
 		[self getData];
 	}
 	
@@ -42,7 +43,7 @@ static id sharedManager = nil;
 	NSLog(@"Loading: Stars");
 	sqlite3 *database;
 	if(sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
-		const char *sqlStatement = "select id,hip,gliese,bayerflamsteed,propername,ra,dec,mag,colorindex from hyg order by mag limit 50000";
+		const char *sqlStatement = "select id,hip,gliese,bayerflamsteed,propername,ra,dec,mag,colorindex from hyg order by mag limit 5000";
 		sqlite3_stmt *compiledStatement;
 		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
@@ -133,10 +134,15 @@ static id sharedManager = nil;
 		
 		struct Pos position;
 		struct Constellation aConstellation;
-		aConstellation.name = [stringArray objectAtIndex:i];
+		aConstellation.name = [[stringArray objectAtIndex:i] retain];
 		position.ra = ra;
 		position.dec = 180 - dec;
 		aConstellation.pos = position;
+		
+		
+		//FIXME NSString in struct was causing trouble, making a constellation name array instead.
+		
+		[constellationNames addObject:[stringArray objectAtIndex:i]];
 		
 		//NSLog(@"%@, %f, %f", aConstellation.name, position.ra, position.dec);
 		
@@ -201,6 +207,11 @@ static id sharedManager = nil;
 	//recalculate planet positions
 	return planets;
 }
+
+- (NSMutableArray*)constellationNames {
+	return constellationNames;
+}
+
 
 -(NSMutableArray*)stars {
 	return stars;

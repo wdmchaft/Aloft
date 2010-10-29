@@ -18,7 +18,7 @@
 	drawer = [[ALDrawer alloc] init];
 	currentType = SkyView;
 	updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.075 target:self selector:@selector(update:) userInfo:nil repeats:YES];
-	
+	draggingSlider = FALSE;
 	
 	[self setupLayers];
 
@@ -117,7 +117,7 @@
 							  relativeTo:@"superlayer"
 							  attribute:kCAConstraintMidY]];
 	
-	CALayer* controlLayer = [CALayer layer];
+	controlLayer = [CALayer layer];
 	[controlLayer setContents:[NSImage imageNamed:@"slider.png"]];
 	controlLayer.frame = CGRectMake(0, 0, 22, 6);
 	[controlLayer addConstraint:[CAConstraint
@@ -125,9 +125,17 @@
 							  relativeTo:@"superlayer"
 							  attribute:kCAConstraintMidX]];
 	[controlLayer addConstraint:[CAConstraint
-							  constraintWithAttribute:kCAConstraintMidY
+							  constraintWithAttribute:kCAConstraintMinY
 							  relativeTo:@"superlayer"
-							  attribute:kCAConstraintMidY]];
+							  attribute:kCAConstraintMinY
+								 offset:25]];
+		
+	NSMutableDictionary *newActions = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[NSNull null], @"position",
+									   [NSNull null], @"frame",
+									   [NSNull null], @"bounds",
+									   nil];
+	controlLayer.actions = newActions;
+	
 	
 	[zoomLayer addSublayer:lineLayer];
 	[zoomLayer addSublayer:plusLayer];
@@ -168,6 +176,10 @@
 			hitLayer = [[rootLayer hitTest:p] superlayer];
 			[hitLayer setFlag:TRUE];	
 		}
+		else if([[rootLayer hitTest:p] isEqual:controlLayer]) {
+			trackingMouse = TRUE;
+			draggingSlider = TRUE;
+		}
 		else {
 			// start tracking mouse
 			if(currentType == SkyView) {
@@ -181,6 +193,13 @@
 - (void)mouseDragged:(NSEvent *)event
 {
 	if(trackingMouse == TRUE) {
+		if(draggingSlider) {
+			NSPoint deltap = NSMakePoint([event locationInWindow].x - p.x, [event locationInWindow].y - p.y);
+			[drawer setZoomValue:[drawer zoomValue] + ((deltap.y * 7)/ 100)];
+			[self setZoomSlider];
+			p = [event locationInWindow];
+		}
+			 else {
 	NSPoint deltap = NSMakePoint([event locationInWindow].x - p.x, [event locationInWindow].y - p.y);
 	p = [event locationInWindow];
 	
@@ -194,12 +213,14 @@
 	tmpPos.dec -= ((deltap.y / ([self frame].size.height / 2)) * deg);
 	
 	[drawer setOrigin:tmpPos];
+			 }
 	}
 }
 
 - (void)mouseUp:(NSEvent *)theEvent {
 	[[NSCursor arrowCursor] push];
 	trackingMouse = FALSE;
+	draggingSlider = FALSE;
 }
 
 - (void)scrollWheel:(NSEvent *)theEvent {
@@ -207,17 +228,42 @@
 	if([theEvent deltaY] == 0) return;
 	if([theEvent deltaY] > 0) {
 		[drawer setZoomValue:[drawer zoomValue] + 0.25];
+		[self setZoomSlider];
 
 	} else {
 		[drawer setZoomValue:[drawer zoomValue] - 0.25];
+		[self setZoomSlider];
 	}
+}
+
+- (void)setZoomSlider {
+	//1 < zoomValue < 8
+	[controlLayer setConstraints:nil];
+	[controlLayer addConstraint:[CAConstraint
+								 constraintWithAttribute:kCAConstraintMinY
+								 relativeTo:@"superlayer"
+								 attribute:kCAConstraintMinY
+								 offset:25+((([drawer zoomValue] - 1) / 7) * 95)]];
+	[controlLayer addConstraint:[CAConstraint
+								 constraintWithAttribute:kCAConstraintMidX
+								 relativeTo:@"superlayer"
+								 attribute:kCAConstraintMidX]];
+	
 }
 
 
 -(void)zoomHitValue:(NSNumber*)aValue {
-	[drawer setZoomValue:[drawer zoomValue] + ([aValue floatValue] / 4)];
-	NSLog(@"%f", [drawer zoomValue]);
+	[drawer setZoomValue:[drawer zoomValue] + ([aValue floatValue] / 2)];
+	[self setZoomSlider];
 }
 
+-(void)toggleFullScreen {
+	if([self isInFullScreenMode]) {
+		[self exitFullScreenModeWithOptions:NULL];
+	}
+	else {
+		[self enterFullScreenMode:[self.window screen] withOptions:NULL];	
+	}
+}
 
 @end

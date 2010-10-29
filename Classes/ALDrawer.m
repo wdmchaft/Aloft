@@ -16,9 +16,14 @@
 	if(aValue < 1.0) {
 		zoomValue = 1;
 	}
+	else if(aValue > 8.0) {
+		zoomValue = 8;
+	}
 	else {
 		zoomValue = aValue;
 	}
+	
+	[self setOrigin:origin];
 }
 
 -(id)init {
@@ -34,6 +39,7 @@
 	NSMutableArray* stars = [[ALDataManager shared] stars];
 	NSMutableArray* positions = [[ALDataManager shared] positions];
 	NSMutableArray* constellations = [[ALDataManager shared] constellations];
+	NSMutableArray* constellationNames = [[ALDataManager shared] constellationNames];
 	NSMutableArray* planets = [[ALDataManager shared] planets];
 
 	CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(0.05, 0.05, 0.05, 1.0));
@@ -94,11 +100,12 @@
 				
 				float azimuth = computeAzimuth(h, aConstellation.pos.ra, aConstellation.pos.dec, 0.90754, 0.08722);
 				float altitude = computeAltitude(h, aConstellation.pos.ra, aConstellation.pos.dec, 0.90754, 0.08722);
+				NSString* theName = [constellationNames objectAtIndex:i];
 				
 				CGContextShowTextAtPoint(context, 
-										 (width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)) - (5 * [aConstellation.name length]),
+										 (width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)) - (5 * [theName length]),
 										 (height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue)), 
-										 [[aConstellation.name uppercaseString] UTF8String], (size_t)[aConstellation.name length]);	//[[[ALDataManager shared] constellations] objectAtIndex:i] 
+										 [[theName uppercaseString] UTF8String], (size_t)[theName length]);	//[[theName uppercaseString] UTF8String]
 			}
 						
 			//draw constellations
@@ -162,6 +169,7 @@
 				if(aStar.mag < 3.0) { CGContextSetFillColorWithColor(context, color); }
 				else { CGContextSetFillColorWithColor(context, color2); } // CHANGE THIS, USE SORTY BY MAG
 				CFRelease(color);
+				CFRelease(color2);
 
 				float azimuth = computeAzimuth(h, aStar.pos.ra, aStar.pos.dec, 0.90754, 0.08722);
 				float altitude = computeAltitude(h, aStar.pos.ra, aStar.pos.dec, 0.90754, 0.08722);

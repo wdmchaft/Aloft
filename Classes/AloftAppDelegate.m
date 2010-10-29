@@ -32,4 +32,8 @@
 	[[ALTimeManager shared] bb];
 }
 
+- (IBAction)toggleFullScreen:(id)sender {
+	[mapView toggleFullScreen];	
+}
+
 @end

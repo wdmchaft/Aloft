@@ -18,13 +18,15 @@
 	//MOUSE SUPPORT
 	ALUIButton* hitLayer;
 	BOOL trackingMouse;
-	
+	BOOL draggingSlider;
+
 	NSTimer* updateTimer;
 	
 	NSArray* names;
 	
 	CALayer* rootLayer;
 	CALayer* menuLayer;
+	CALayer* controlLayer;
 	
 	float zoomValue;
 	
@@ -35,5 +37,7 @@
 
 -(void)setupLayers;
 -(void)zoomHitValue:(NSNumber*)aValue;
+-(void)setZoomSlider;
+-(void)toggleFullScreen;
 
 @end
