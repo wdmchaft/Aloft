@@ -56,14 +56,15 @@
 		case SkyView:
 			radius = viewRect.size.height;
 			//geometric variables						
-			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(1.0, 0.0, 0.0, 0.9));
 			
 			
-			size_t num_locations = 3;
-			 CGFloat locations[3] = { 1.0, 0.5, 0.0 };
-			 CGFloat components[12] = {0.0, 0.00, 0.0, 1.0, 
-			 0.1, 0.0, 0.1, 1.0,
-			 0.0, 0.00, 0.0, 1.0};
+			size_t num_locations = 5;
+			 CGFloat locations[5] = { 1.0, 0.6, 0.5, 0.4, 0.0 };
+			 CGFloat components[20] = { 0.05, 0.06, 0.1, 1.0, 
+										0.05, 0.06, 0.1, 1.0, 
+										0.10, 0.12, 0.2, 1.0,
+										0.05, 0.06, 0.1, 1.0, 
+										0.05, 0.06, 0.1, 1.0};
 			 
 			 CGColorSpaceRef myColorspace = CGColorSpaceCreateDeviceRGB(); 
 			
@@ -82,12 +83,12 @@
 			
 			
 			//test with text
-			CGColorRef bgColor = CGColorCreateGenericRGB(0.18, 0.205, 0.245, 1.0); 
+			CGColorRef bgColor = CGColorCreateGenericRGB(1.0, 1.0, 1.0, 0.4); 
 			CGContextSetFillColorWithColor(context, bgColor);
 			CFRelease(bgColor);
 			
-			CGContextSelectFont (context, "Didot" , 8, kCGEncodingMacRoman);
-			CGContextSetCharacterSpacing(context, 3);
+			CGContextSelectFont (context, "Helvetica Bold" , 11, kCGEncodingMacRoman);
+			//CGContextSetCharacterSpacing(context, 2);
 			CGContextSetTextDrawingMode (context, kCGTextFill);
 			CGContextSetLineWidth(context, 0.5);
 			
@@ -105,7 +106,7 @@
 				CGContextShowTextAtPoint(context, 
 										 (width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)) - (5 * [theName length]),
 										 (height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue)), 
-										 [[theName uppercaseString] UTF8String], (size_t)[theName length]);	//[[theName uppercaseString] UTF8String]
+										 [theName UTF8String], (size_t)[theName length]);	//[[theName uppercaseString] UTF8String]
 			}
 						
 			//draw constellations
@@ -220,6 +221,30 @@
 									 [thePlanet.name UTF8String], (size_t)[thePlanet.name length]);	//[[[ALDataManager shared] constellations] objectAtIndex:i]
 			}
 			
+			//draw sun(!)
+			ALSun* theSun = [[ALDataManager shared] sun];
+			float sunSize = 64;
+			
+			float azimuth = computeAzimuth(h, theSun.ra, theSun.dec, 0.90754, 0.08722);
+			float altitude = computeAltitude(h, theSun.ra, theSun.dec, 0.90754, 0.08722);
+		
+			CGRect sunRect = CGRectMake((width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue)) - sunSize / 2,
+										(height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue)) - sunSize / 2,
+										sunSize, 
+										sunSize);
+			CGImageSourceRef source;
+			source = CGImageSourceCreateWithData((CFDataRef)[[NSImage imageNamed:@"sun.png"] TIFFRepresentation], NULL);
+			CGImageRef sunImage =  CGImageSourceCreateImageAtIndex(source, 0, NULL);
+			
+			CGContextDrawImage(context, 
+							   sunRect,
+							   sunImage);
+			
+			CGContextShowTextAtPoint(context, 
+									 (width / 2 + ((width / 2) * ((azimuth - origin.ra) / (M_PI)) * zoomValue) - 12),
+									 (height / 2 + ((height / 2) * ((altitude - origin.dec) / 90) * zoomValue) - 30),
+									 [[theSun name] UTF8String], (size_t)[theSun.name length]);	//[[[ALDataManager shared] constellations] objectAtIndex:i]
+			
 			//opacify stuff below the horizon
 			CGContextSetFillColorWithColor(context, CGColorCreateGenericRGB(0.0, 0.0, 0.0, 0.5));
 			CGContextFillRect(context, CGRectMake((width / 2) - (((origin.ra - M_PI) / M_PI)*(width/2)*zoomValue) - ((width/2) * zoomValue),
@@ -333,9 +358,7 @@
 	else if((width / 2) - (((theOrigin.ra - M_PI) / M_PI)*(width/2)*zoomValue) + ((width/2) * zoomValue) - width < -0.01) {
 		theOrigin.ra =  M_PI * ((((-width+width*zoomValue)/2)/((width*zoomValue)/2))) + M_PI;
 	}
-	
-	NSLog(@"%f", (width / 2) - (((theOrigin.ra - M_PI) / M_PI)*(width/2)*zoomValue) + ((width/2) * zoomValue) - width);
-	
+		
 	origin = theOrigin;
 }
 

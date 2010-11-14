@@ -43,7 +43,7 @@ static id sharedManager = nil;
 	NSLog(@"Loading: Stars");
 	sqlite3 *database;
 	if(sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
-		const char *sqlStatement = "select id,hip,gliese,bayerflamsteed,propername,ra,dec,mag,colorindex from hyg order by mag limit 5000";
+		const char *sqlStatement = "select id,hip,gliese,bayerflamsteed,propername,ra,dec,mag,colorindex from hyg order by mag limit 500";
 		sqlite3_stmt *compiledStatement;
 		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
@@ -199,8 +199,14 @@ static id sharedManager = nil;
 	[Neptune calculatePosition];
 	[Neptune setOriginx:Earth.X y:Earth.Y z:Earth.Z];
 	[planets addObject:Neptune]; 
-		
+	
+	sun = [[ALSun alloc] initWithx:Earth.X y:Earth.Y z:Earth.Z];
+
 	NSLog(@".. done");
+}
+
+-(ALSun*)sun {
+	return sun;
 }
 
 -(NSArray*)planets {

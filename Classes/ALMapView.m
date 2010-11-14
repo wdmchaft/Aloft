@@ -67,9 +67,9 @@
 								   relativeTo:@"superlayer"
 								   attribute:kCAConstraintMinY
 								   offset: 62]];
-		 testLayer.borderWidth = 2;
+		 testLayer.borderWidth = 1;
 		 testLayer.borderColor = CGColorCreateGenericRGB(0.5f,0.5f,0.5f,0.7f);
-		 testLayer.backgroundColor = CGColorCreateGenericRGB(0.0f,0.0f,0.0f,0.7f);
+		 testLayer.backgroundColor = CGColorCreateGenericRGB(0.1f,0.1f,0.1f,0.7f);
 		 testLayer.cornerRadius = 10;
 		 
 		 [testLayer setHidden:TRUE];
@@ -81,6 +81,13 @@
 		[rootLayer addSublayer:testLayer];
 	}
 	
+	//full screen button
+	ALUIButton* fullScreenButton = [[ALUIButton alloc] initLeftWithTitle:@"Full Screen"
+																   frame:CGRectMake(20, 8, 80, 50)
+																   layer:nil
+																delegate:self];
+	[menuLayer addSublayer:fullScreenButton];
+
 	//add zoom controls
 	int height = 150;
 	CALayer* zoomLayer = [CALayer layer];
@@ -130,11 +137,11 @@
 							  attribute:kCAConstraintMinY
 								 offset:25]];
 		
-	NSMutableDictionary *newActions = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[NSNull null], @"position",
+	NSMutableDictionary *fullActions = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[NSNull null], @"position",
 									   [NSNull null], @"frame",
 									   [NSNull null], @"bounds",
 									   nil];
-	controlLayer.actions = newActions;
+	controlLayer.actions = fullActions;
 	
 	
 	[zoomLayer addSublayer:lineLayer];

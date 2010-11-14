@@ -23,6 +23,7 @@ typedef int ViewType;
 	float width;
 	Pos origin;
 	Pos constellationpos[88];
+	CGImageRef starImage;
 }
 
 @property (assign) float zoomValue;

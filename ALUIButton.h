@@ -15,9 +15,12 @@
 	CALayer* view; //used to open up the HUD window/view
 	CALayer* iconLayer; //self-explanatory
 	BOOL on;
+	
+	id delegate;
 }
 
 -(void)setFlag:(BOOL)turnOn;
 -(id)initWithTitle:(NSString*)theTitle frame:(CGRect)theFrame layer:(CALayer*)theLayer;
+-(id)initLeftWithTitle:(NSString*)theTitle frame:(CGRect)theFrame layer:(CALayer*)theLayer delegate:(id)aDelegate;
 
 @end

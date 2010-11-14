@@ -40,6 +40,11 @@
 		ACC2C9E1127882280085A47B /* constellation_positions.txt in Resources */ = {isa = PBXBuildFile; fileRef = ACC2C9E0127882280085A47B /* constellation_positions.txt */; };
 		DC1A1B7112721A6C00591ADA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */; };
 		DC7B5FB012722A4800A2929C /* cmath.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7B5FAF12722A4800A2929C /* cmath.m */; };
+		DC90D7D7128586630042F66B /* icon_full screen_off.png in Resources */ = {isa = PBXBuildFile; fileRef = DC90D7D6128586630042F66B /* icon_full screen_off.png */; };
+		DC90D80012858E960042F66B /* icon_full screen_on.png in Resources */ = {isa = PBXBuildFile; fileRef = DC90D7FF12858E960042F66B /* icon_full screen_on.png */; };
+		DC90D8241285955A0042F66B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DC90D8221285955A0042F66B /* star.png */; };
+		DC90D8251285955A0042F66B /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = DC90D8231285955A0042F66B /* sun.png */; };
+		DC90D828128595A80042F66B /* ALSun.m in Sources */ = {isa = PBXBuildFile; fileRef = DC90D827128595A80042F66B /* ALSun.m */; };
 		DCD3D25E127B15A700194144 /* ALPlanet.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD3D25D127B15A700194144 /* ALPlanet.m */; };
 		DCE08A971274D10300B15764 /* constellation_lines.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCE08A961274D10300B15764 /* constellation_lines.txt */; };
 /* End PBXBuildFile section */
@@ -92,6 +97,12 @@
 		DC1A1B7012721A6C00591ADA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DC7B5FAE12722A4800A2929C /* cmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmath.h; sourceTree = "<group>"; };
 		DC7B5FAF12722A4800A2929C /* cmath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmath.m; sourceTree = "<group>"; };
+		DC90D7D6128586630042F66B /* icon_full screen_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_full screen_off.png"; path = "Resources/Images/Backgrounds/Nav/icon_full screen_off.png"; sourceTree = "<group>"; };
+		DC90D7FF12858E960042F66B /* icon_full screen_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_full screen_on.png"; path = "Resources/Images/Backgrounds/Nav/icon_full screen_on.png"; sourceTree = "<group>"; };
+		DC90D8221285955A0042F66B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = Resources/Images/Textures/star.png; sourceTree = "<group>"; };
+		DC90D8231285955A0042F66B /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sun.png; path = Resources/Images/Textures/sun.png; sourceTree = "<group>"; };
+		DC90D826128595A80042F66B /* ALSun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSun.h; sourceTree = "<group>"; };
+		DC90D827128595A80042F66B /* ALSun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSun.m; sourceTree = "<group>"; };
 		DCD3D25C127B15A700194144 /* ALPlanet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPlanet.h; sourceTree = "<group>"; };
 		DCD3D25D127B15A700194144 /* ALPlanet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPlanet.m; sourceTree = "<group>"; };
 		DCE08A961274D10300B15764 /* constellation_lines.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = constellation_lines.txt; path = Data/constellation_lines.txt; sourceTree = "<group>"; };
@@ -199,8 +210,10 @@
 				AC9B8C6412774F7B00829B81 /* icon_settings_on.png */,
 				AC9B8C6512774F7B00829B81 /* icon_sun_on.png */,
 				AC9B8C6612774F7B00829B81 /* icon_time_on.png */,
+				DC90D7D6128586630042F66B /* icon_full screen_off.png */,
 				AC9B8C6712774F7B00829B81 /* icon_view_on.png */,
 				AC151980127604BC00E15888 /* icon_sun_off.png */,
+				DC90D7FF12858E960042F66B /* icon_full screen_on.png */,
 				AC23680B1276389B00B27ED9 /* icon_location_on.png */,
 				AC151981127604BC00E15888 /* icon_time_off.png */,
 				AC151982127604BC00E15888 /* icon_view_off.png */,
@@ -222,6 +235,7 @@
 		AC4E795C1275E4C30019855E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DC90D821128595490042F66B /* Texture */,
 				AC2366BB1276239100B27ED9 /* Zoom */,
 				AC1518F31275FFD700E15888 /* Icons */,
 				AC4E795D1275E4C90019855E /* Backgrounds */,
@@ -311,11 +325,22 @@
 			name = Celestial;
 			sourceTree = "<group>";
 		};
+		DC90D821128595490042F66B /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				DC90D8221285955A0042F66B /* star.png */,
+				DC90D8231285955A0042F66B /* sun.png */,
+			);
+			name = Texture;
+			sourceTree = "<group>";
+		};
 		DCD3D262127B173B00194144 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
 				DCD3D25C127B15A700194144 /* ALPlanet.h */,
 				DCD3D25D127B15A700194144 /* ALPlanet.m */,
+				DC90D826128595A80042F66B /* ALSun.h */,
+				DC90D827128595A80042F66B /* ALSun.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -348,6 +373,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Aloft" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -391,6 +417,10 @@
 				AC9B8C6B12774F7B00829B81 /* icon_time_on.png in Resources */,
 				AC9B8C6C12774F7B00829B81 /* icon_view_on.png in Resources */,
 				ACC2C9E1127882280085A47B /* constellation_positions.txt in Resources */,
+				DC90D7D7128586630042F66B /* icon_full screen_off.png in Resources */,
+				DC90D80012858E960042F66B /* icon_full screen_on.png in Resources */,
+				DC90D8241285955A0042F66B /* star.png in Resources */,
+				DC90D8251285955A0042F66B /* sun.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +441,7 @@
 				AC9B8B5D1277403500829B81 /* ALUIButton.m in Sources */,
 				AC9B8CAE1277544200829B81 /* ALUIControl.m in Sources */,
 				DCD3D25E127B15A700194144 /* ALPlanet.m in Sources */,
+				DC90D828128595A80042F66B /* ALSun.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

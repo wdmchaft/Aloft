@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <sqlite3.h>
 #import "ALPlanet.h"
+#import "ALSun.h"
 
 typedef struct Pos {
 	float ra;
@@ -39,7 +40,7 @@ struct Constellation {
 	NSMutableArray* constellationNames;
 	NSMutableArray* planets;
 	NSMutableArray* positions;
-
+	ALSun* sun;
 }
 
 + (id)shared;
@@ -49,5 +50,6 @@ struct Constellation {
 - (NSMutableArray*)constellations;
 - (NSMutableArray*)constellationNames;
 - (NSMutableArray*)positions;
+-(ALSun*)sun;
 
 @end
